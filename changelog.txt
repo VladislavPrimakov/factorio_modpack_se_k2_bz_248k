@@ -1,0 +1,104 @@
+Version: 1.0.34
+Date: 20. 02. 2024
+  Changes:
+  - Decreased stack size 248k mod science packs and data.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.33
+Date: 20. 02. 2024
+  Changes:
+  - Rebalance some recipes. Improve regroup. Added conversion of dirty water from k2 mode to 248k and vice versa.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.32
+Date: 21. 11. 2023
+  Changes:
+  - Better rebalance locomotives, cars, wagons.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.26
+Date: 21. 11. 2023
+  Changes:
+  - Rebalance locomotives, cars, wagons.
+  - Remove possible to change stack size core ores and ingots.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.24
+Date: 18. 11. 2023
+  Changes:
+  - Set rampant as optional. Rebalance wagons/fluid-wagons sizes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.23
+Date: 13. 11. 2023
+  Changes:
+  - Removed the ability to change stack sizes for resources from SE as this changed the balance of the game. However, it is still possible to change the stack sizes for resources from Navius.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.20
+Date: 08. 11. 2023
+  Changes:
+  - More expansive recipes rails, walls, road.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.18
+Date: 06. 11. 2023
+  Changes:
+  - Add support wide chest logistic. Move some mods to my QOL modpack.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+Date: 31. 10. 2023
+  Changes:
+  - Replaced mod evolution from causes-evolution to rampant evolution. Change seetings of evolution from only techologies.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+Date: 18. 10. 2023
+  Changes:
+  - Moved tech for append count of beacons of 248k mod to early game because recipes too much.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.13
+Date: 12. 10. 2023
+  Changes:
+  - Added modules to bz_foundry assembling.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+Date: 10. 10. 2023
+  Changes:
+  - Fixed pipes to 248k assembling machines.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+Date: 10. 10. 2023
+  Changes:
+  - Fixed dependencies for qol modpack.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: 10. 10. 2023
+  Changes:
+  - Added pipes to 248k assembling machines for allow recipes with fluid.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 08. 10. 2023
+  Changes:
+  - Changed restack and regroup functions for optimization.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 29. 09. 2023
+  Changes:
+  - Added Arachnids mod.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 25. 09. 2023
+  Changes:
+  - Added More Repair Packs mod.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 24. 09. 2023
+  Changes:
+  - Compability update with mod Rampant Arsenal
+  - Micro fixes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 10. 09. 2023
+  Changes:
+  - Changed tab groups.
+  - Micro fixes.
+  - Added own restack with settings
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 23. 08. 2023
+  Changes:
+  - Created mod
+---------------------------------------------------------------------------------------------------
