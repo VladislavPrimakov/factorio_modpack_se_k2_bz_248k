@@ -1,6 +1,6 @@
 {
   "name": "modpack_se_k2_bz_248k",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "factorio_version": "1.1",
   "title": "Modpack SE + K2 + BZ ores + 248k + Rampant",
   "author": "moral1ty",
@@ -81,6 +81,9 @@
     "? Kux-OrbitalIonCannon >= 2.4.1",
     "? RampantFixed >= 1.7.4",
     "? Arachnids >= 1.1.1",
+    "? se-ltn-glue >= 0.6.0",
+    "? deep-storage-unit-se2 >= 1.3.4",
+    "? se_allow_in_space >= 0.0.2",
     "? qol_by_morality >= 1.0.0"
   ]
 }

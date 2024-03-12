@@ -16,7 +16,6 @@ change_setting("ifnickel-experimental-intermediates", true)
 change_setting("brasstacks-experimental-intermediates", true)
 change_setting("kr-more-realistic-weapon-auto-aim", true)
 change_setting("kr-fix-laser-artillery-turret", true)
-change_setting("st-wagon-size", 50000)
 change_setting("bzchlorine-early-salt", "both")
 change_setting("bzsilicon-bio-crushed-stone", false)
 change_setting("bztin-more-intermediates", "bronze")
@@ -57,6 +56,7 @@ if mods["RampantFixed"] then
     change_setting("rampantFixed--peacePeriod", 120)
     change_setting("rampantFixed--undergroundAttack", false)
     change_setting("rampantFixed--removeBloodParticles", true)
+    change_setting("rampantFixed--flamethrowerTurretsRebalance", true)
 end
 
 if mods["RampantEvolution"] then

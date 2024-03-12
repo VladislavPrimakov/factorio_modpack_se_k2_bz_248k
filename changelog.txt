@@ -1,3 +1,10 @@
+Version: 1.0.35
+Date: 12. 03. 2024
+  Changes:
+  - Changed recipe "Scrap recyrling". Now 10 scrap = 1 Material testing pack.
+  - Improve regrouping.
+  - Rebalance armor equipment. Added nuclear pods from 248k to nuclear generator.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.34
 Date: 20. 02. 2024
   Changes:

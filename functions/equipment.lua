@@ -38,10 +38,8 @@ local function remove_category_from_equipment(name_equipment, name_category)
 end
 
 local function add_category_to_grid(name_grid, name_category)
-    if data.raw["equipment-grid"][name_grid] ~= nil then
-        if data.raw["equipment-category"][name_category] ~= nil then
-            table.insert(data.raw["equipment-grid"][name_grid].equipment_categories, name_category)
-        end
+    if data.raw["equipment-grid"][name_grid] ~= nil and data.raw["equipment-category"][name_category] ~= nil then
+        table.insert(data.raw["equipment-grid"][name_grid].equipment_categories, name_category)
     end
 end
 

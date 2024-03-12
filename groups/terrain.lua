@@ -1,4 +1,4 @@
-local regroup = require("functions/regroup")
+local util = require("functions/util")
 
 data:extend {
     {
@@ -10,7 +10,7 @@ data:extend {
     },
 }
 
-regroup.create_subgroup("terrain", "terrain", "raw-01")
+util.regroup.create_subgroup("terrain", "terrain", "raw-01")
 
 -- terrain
-regroup.set_subgroup_to_prototype("el_dirty_water_landfill_recipe", "terrain")
+util.regroup.set_subgroup_to_prototype("el_dirty_water_landfill_recipe", "terrain")
