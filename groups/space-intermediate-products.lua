@@ -22,6 +22,8 @@ util.regroup.create_subgroup("space-intermediate-product-gel", "space-intermedia
 util.regroup.create_subgroup("space-intermediate-product-sludge", "space-intermediate-products", "raw-10")
 util.regroup.create_subgroup("space-intermediate-product-particle-stream", "space-intermediate-products", "raw-11")
 util.regroup.create_subgroup("space-intermediate-product-materialisation", "space-intermediate-products", "raw-12")
+util.regroup.create_subgroup("basic-matter-conversion", "space-intermediate-products", "raw-13")
+util.regroup.create_subgroup("matter-conversion", "space-intermediate-products", "raw-13")
 
 -- space-intermediate-product-specialist-assembling
 util.regroup.set_subgroup_to_prototype("se-space-mirror", "space-intermediate-product-specialist-assembling", "01")

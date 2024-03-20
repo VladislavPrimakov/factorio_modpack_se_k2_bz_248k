@@ -76,8 +76,8 @@ data:extend({
             primary = { r = 0.60, g = 0.20, b = 0, a = 0.6 },
             secondary = { r = 1.0, g = 0.843, b = 0.0, a = 0.9 }
         },
-        subgroup = "chemical",
-        order = "17"
+        subgroup = "resources-enrichment",
+        order = "19"
     },
     {
         type = "recipe",
@@ -104,7 +104,7 @@ data:extend({
             primary = { r = 0.60, g = 0.20, b = 0, a = 0.6 },
             secondary = { r = 1.0, g = 0.843, b = 0.0, a = 0.9 }
         },
-        subgroup = "chemical",
-        order = "18"
+        subgroup = "resources-enrichment",
+        order = "20"
     }
 })

@@ -1,12 +1,11 @@
 if (settings.startup["Modpack-ReStack-enabled"].value == true) then
     local util = require("functions/util")
 
-    local resources_ores = { "coal", "wood", "sulfur", "stone", "raw-rare-metals",
+    local items_ore = { "coal", "wood", "sulfur", "stone", "raw-rare-metals",
         "flake-graphite", "salt", "zircon" }
 
-    local banned_se_resources = { "vulcanite", "cryonite", "imersite",
-        "beryllium", "holmium", "naquium",
-        "vitamelange", "iridium" }
+    local banned_se_subgroups = { "resources-vulcanite", "resources-cryonite", "resources-imersite",
+        "resources-beryllium", "resources-holmium", "resources-naquium", "resources-vitamelange", "resources-iridium" }
 
     for type, _ in pairs(data.raw) do
         for _, item in pairs(data.raw[type]) do
@@ -132,7 +131,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         or item.subgroup == "logistic-pole-substation" then
                         if settings.startup["Modpack-ReStack-electic-poles"].value then
                             util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-electic-poles"]
-                            .value)
+                                .value)
                         end
                     end
                     if item.subgroup == "logistic-drones" then
@@ -186,7 +185,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                 end
                 -- resources and petrochemestry
                 if (data.raw["item-subgroup"][item.subgroup].group == "resources" or data.raw["item-subgroup"][item.subgroup].group == "petrochemistry") then
-                    local isItemBannedSe = krastorio_utils.tables.find(banned_se_resources,
+                    local isItemBannedSe = krastorio_utils.tables.find(banned_se_subgroups,
                         function(i) return i == item.subgroup end)
                     if item.subgroup ~= "petrochemistry-fuel"
                         and item.subgroup ~= "petrochemistry-rocket-fuel"
@@ -194,7 +193,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         local startPosCoreFragment = string.find(item.name, "core%-fragment")
                         local startPosIngot = string.find(item.name, "ingot")
                         local startPosOre = string.find(item.name, "ore")
-                        local isItemOres = krastorio_utils.tables.find(resources_ores,
+                        local isItemOres = krastorio_utils.tables.find(items_ore,
                             function(i) return i == item.name end)
                         if settings.startup["Modpack-ReStack-resources"].value then
                             if startPosCoreFragment == nil and startPosOre == nil and isItemOres == nil and startPosIngot == nil then

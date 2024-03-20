@@ -119,12 +119,12 @@ end
 -- material testing pack
 data.raw.recipe["se-scrap-recycling"].results = {
     { name = "lead-ore",         amount_min = 1, amount_max = 1, probability = 0.30 },
-    { name = "nickel-ore",       amount_min = 1, amount_max = 1, probability = 0.30 },
     { name = "raw-rare-metals",  amount_min = 1, amount_max = 1, probability = 0.30 },
     { name = "iron-ore",         amount_min = 1, amount_max = 1, probability = 0.15 },
     { name = "copper-ore",       amount_min = 1, amount_max = 1, probability = 0.15 },
     { name = "flake-graphite",   amount_min = 1, amount_max = 1, probability = 0.10 },
     { name = "bismuth-ore",      amount_min = 1, amount_max = 1, probability = 0.10 },
+    { name = "nickel-ore",       amount_min = 1, amount_max = 1, probability = 0.10 },
     { name = "titanium-ore",     amount_min = 1, amount_max = 1, probability = 0.10 },
     { name = "imersite-crystal", amount_min = 1, amount_max = 1, probability = 0.10 },
     { name = "stone",            amount_min = 1, amount_max = 1, probability = 0.05 },

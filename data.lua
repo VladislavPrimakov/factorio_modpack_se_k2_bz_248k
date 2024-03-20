@@ -1,3 +1,6 @@
+-- ordersgroup
+require("groups/_ordersgroup")
+
 -- prototypes
 require("prototypes/common")
 require("prototypes/pipes")
