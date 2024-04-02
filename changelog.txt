@@ -1,3 +1,9 @@
+Version: 1.0.37
+Date: 02. 04. 2024
+  Changes:
+  - Fixed techologies artillery turret damage bonus. Previously, the damage bonus was for light artillery.
+  - Moved equipment from the Rampant Arsenal to a later stage of the game for balance.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.36
 Date: 19. 03. 2024
   Changes:

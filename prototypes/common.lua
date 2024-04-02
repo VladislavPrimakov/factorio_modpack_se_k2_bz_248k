@@ -50,6 +50,8 @@ util.equipment.create_grid("gr_magnet_train_pre_grid")
 util.equipment.create_grid("gr_magnet_train_grid")
 util.equipment.create_grid("kr-advanced-tank-grid")
 
+data.raw["generator-equipment"]["mk3-generator-rampant-arsenal"].power = "2000kW"
+
 data:extend({
     {
         type = "recipe",

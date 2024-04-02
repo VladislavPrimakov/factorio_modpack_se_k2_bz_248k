@@ -249,7 +249,7 @@ krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-damage-10",
     { type = "ammo-damage", ammo_category = "heavy-rocket",         modifier = 0.5 },
 })
 
--- rampant-arsenal-technology-rocket-speed-
+-- rampant-arsenal-technology-rocket-speed
 krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-speed-6", {
     { type = "gun-speed", ammo_category = "missiles-for-turrets", modifier = 0.6 },
     { type = "gun-speed", ammo_category = "heavy-rocket",         modifier = 0.6 },
@@ -422,13 +422,13 @@ for i = 0, 4 do
     })
 end
 
--- artillery-turret
+-- artillery-wagon-cannon
 for i = 0, 4 do
     local turret_name
     if i == 0 then
-        turret_name = "lite-artillery-turret-rampant-arsenal"
+        turret_name = "artillery-turret"
     else
-        turret_name = "hero-turret-" .. i .. "-for-lite-artillery-turret-rampant-arsenal"
+        turret_name = "hero-turret-" .. i .. "-for-artillery-turret"
     end
     for j = 1, 6 do
         krastorio.technologies.addEffects("rampant-arsenal-technology-artillery-turret-damage-" .. j, {

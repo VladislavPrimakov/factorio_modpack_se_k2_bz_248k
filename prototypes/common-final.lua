@@ -106,6 +106,35 @@ bobmods.lib.recipe.add_ingredient("power-armor-mk3-armor-rampant-arsenal", { "tu
 bobmods.lib.recipe.add_ingredient("power-armor-mk3-armor-rampant-arsenal", { "se-iridium-plate", 25 })
 bobmods.lib.recipe.add_ingredient("power-armor-mk3-armor-rampant-arsenal", { "energy-control-unit", 35 })
 
+bobmods.lib.recipe.clear_ingredients("mk3-battery-rampant-arsenal")
+bobmods.lib.recipe.add_ingredient("mk3-battery-rampant-arsenal", { "big-battery-mk3-equipment", 2 })
+bobmods.lib.recipe.add_ingredient("mk3-battery-rampant-arsenal", { "pcb-solder", 2 })
+bobmods.lib.recipe.add_ingredient("mk3-battery-rampant-arsenal", { "advanced-processing-unit", 2 })
+bobmods.lib.recipe.add_ingredient("mk3-battery-rampant-arsenal", { "se-dynamic-emitter", 8 })
+bobmods.lib.recipe.add_ingredient("mk3-battery-rampant-arsenal", { "se-naquium-cube", 4 })
+
+data.raw["generator-equipment"]["mk3-generator-rampant-arsenal"].power = "2000kW"
+bobmods.lib.recipe.clear_ingredients("mk3-generator-rampant-arsenal")
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "se-superconductive-cable", 16 })
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "pcb-solder", 100 })
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "advanced-processing-unit", 100 })
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "low-density-structure", 200 })
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "se-radiation-data", 1 })
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "se-atomic-data", 1 })
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "se-quark-data", 1 })
+bobmods.lib.recipe.add_ingredient("mk3-generator-rampant-arsenal", { "se-rtg-equipment-2", 4 })
+
+bobmods.lib.recipe.clear_ingredients("nuclear-generator-rampant-arsenal")
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "ai-core", 32 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "se-naquium-processor", 4 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "low-density-structure", 400 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "pcb-solder", 200 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "se-radiation-data", 1 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "se-atomic-data", 1 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "se-quark-data", 1 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "se-fusion-test-data", 1 })
+bobmods.lib.recipe.add_ingredient("nuclear-generator-rampant-arsenal", { "mk3-generator-rampant-arsenal", 4 })
+
 if mods["big_power_poles_patched"] then
     bobmods.lib.recipe.remove_ingredient("bp_extreme_power_pole", "copper-plate")
     bobmods.lib.recipe.remove_ingredient("bp_extreme_power_pole", "steel-plate")
@@ -131,7 +160,57 @@ data.raw.recipe["se-scrap-recycling"].results = {
     { name = "wood",             amount_min = 1, amount_max = 1, probability = 0.05 },
 }
 
+-- "klin" category to advanced furnance
+table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "kiln")
+
 -- technologies
+
+-- mk3-battery-rampant-arsenal
+krastorio.technologies.removePrerequisite("rampant-arsenal-technology-battery-equipment-3", "battery-mk2-equipment")
+krastorio.technologies.removePrerequisite("rampant-arsenal-technology-battery-equipment-3", "effectivity-module-3")
+krastorio.technologies.addPrerequisite("rampant-arsenal-technology-battery-equipment-3", "kr-battery-mk3-equipment")
+krastorio.technologies.addPrerequisite("rampant-arsenal-technology-battery-equipment-3", "se-deep-space-science-pack-1")
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
+    "military-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
+    "se-energy-science-pack-1")
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
+    "se-material-science-pack-2")
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
+    "se-energy-science-pack-4", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
+    "se-material-science-pack-4", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
+    "se-deep-space-science-pack-1", 1)
+krastorio.technologies.setResearchUnitCount("rampant-arsenal-technology-battery-equipment-3", 1000)
+data.raw["technology"]["rampant-arsenal-technology-battery-equipment-3"].unit.time = 90
+
+-- mk3-generator-rampant-arsenal
+krastorio.technologies.removePrerequisite("rampant-arsenal-technology-generator-equipment-2", "fusion-reactor-equipment")
+krastorio.technologies.addPrerequisite("rampant-arsenal-technology-generator-equipment-2", "se-rtg-equipment-2")
+krastorio.technologies.addPrerequisite("rampant-arsenal-technology-generator-equipment-2", "se-energy-science-pack-3")
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-2",
+    "military-science-pack")
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-2",
+    "se-energy-science-pack-3", 1)
+krastorio.technologies.setResearchUnitCount("rampant-arsenal-technology-generator-equipment-2", 400)
+data.raw["technology"]["rampant-arsenal-technology-generator-equipment-2"].unit.time = 90
+
+-- nuclear-generator-rampant-arsenal
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
+    "military-science-pack")
+krastorio.technologies.addPrerequisite("rampant-arsenal-technology-generator-equipment-3", "se-deep-space-science-pack-4")
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
+    "se-material-science-pack-4", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
+    "se-kr-matter-science-pack-2", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
+    "singularity-tech-card", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
+    "se-deep-space-science-pack-4", 1)
+krastorio.technologies.setResearchUnitCount("rampant-arsenal-technology-generator-equipment-3", 600)
+data.raw["technology"]["rampant-arsenal-technology-generator-equipment-3"].unit.time = 120
+
 -- lighted poles
 krastorio.technologies.removeEffect("optics", { type = "unlock-recipe", recipe = "lighted-kr-substation-mk2" })
 krastorio.technologies.removeEffect("optics", { type = "unlock-recipe", recipe = "lighted-bi-large-substation" })

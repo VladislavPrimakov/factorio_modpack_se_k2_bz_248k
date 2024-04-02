@@ -348,13 +348,13 @@ util.regroup.set_subgroup_to_prototype("silver-brazing-alloy", "resources-silver
 -- tin
 util.regroup.set_subgroup_to_prototype("se-core-fragment-tin-ore", "resources-tin", "01")
 util.regroup.set_subgroup_to_prototype("tin-ore", "resources-tin", "02")
-util.regroup.set_subgroup_to_prototype("enriched-tin", "resources-tin", "03")
-util.regroup.set_subgroup_to_prototype("dirty-water-filtration-tin", "resources-tin", "032")
-util.regroup.set_subgroup_to_prototype("molten-tin", "resources-tin", "033")
-util.regroup.set_subgroup_to_prototype("tin-ingot", "resources-tin", "04")
-util.regroup.set_subgroup_to_prototype("tin-plate", "resources-tin", "051")
-util.regroup.set_subgroup_to_prototype("enriched-tin-plate", "resources-tin", "052")
-util.regroup.set_subgroup_to_prototype("tin-ingot-to-plate", "resources-tin", "053")
+util.regroup.set_subgroup_to_prototype("dirty-water-filtration-tin", "resources-tin", "03")
+util.regroup.set_subgroup_to_prototype("tin-plate", "resources-tin", "04")
+util.regroup.set_subgroup_to_prototype("enriched-tin", "resources-tin", "05")
+util.regroup.set_subgroup_to_prototype("enriched-tin-plate", "resources-tin", "06")
+util.regroup.set_subgroup_to_prototype("molten-tin", "resources-tin", "07")
+util.regroup.set_subgroup_to_prototype("tin-ingot", "resources-tin", "08")
+util.regroup.set_subgroup_to_prototype("tin-ingot-to-plate", "resources-tin", "09")
 
 -- titanium
 util.regroup.set_subgroup_to_prototype("se-core-fragment-titanium-ore", "resources-titanium", "01")
