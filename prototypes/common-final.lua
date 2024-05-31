@@ -26,6 +26,12 @@ util.restack.restack("item", "gr_materials_white_data_item", 100)
 bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
 bobmods.lib.recipe.add_ingredient("rail", { "concrete", 2 })
 
+bobmods.lib.recipe.add_ingredient("rocket-fuel-with-ammonia", { "solid-fuel", 10 })
+bobmods.lib.recipe.set_energy_required("rocket-fuel-with-ammonia", 2)
+bobmods.lib.recipe.add_ingredient("rocket-fuel-with-hydrogen-chloride", { "solid-fuel", 10 })
+bobmods.lib.recipe.set_energy_required("rocket-fuel-with-hydrogen-chloride", 2)
+bobmods.lib.recipe.add_ingredient("se-vulcanite-rocket-fuel", { "solid-fuel", 10 })
+
 bobmods.lib.recipe.remove_ingredient("nuclear-train-vehicle-rampant-arsenal", "steel-plate")
 bobmods.lib.recipe.remove_ingredient("nuclear-train-vehicle-rampant-arsenal", "nuclear-reactor")
 bobmods.lib.recipe.add_ingredient("nuclear-train-vehicle-rampant-arsenal", { "advanced-gearbox", 4 })
@@ -270,7 +276,7 @@ data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].capacity = 100000
 
 -- repairs pack
 local _durability = 300
-local _stack_size = 200
+local _stack_size = 100
 data.raw["repair-tool"]["copper-repair-pack"].durability = _durability
 data.raw["repair-tool"]["copper-repair-pack"].speed = 3
 data.raw["repair-tool"]["copper-repair-pack"].stack_size = _stack_size

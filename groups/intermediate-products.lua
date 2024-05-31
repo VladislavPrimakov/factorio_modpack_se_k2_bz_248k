@@ -145,9 +145,9 @@ util.regroup.set_subgroup_to_prototype("se-nanomaterial-nanotubes", "intermediat
 
 -- intermediate-product-gearbox
 util.regroup.set_subgroup_to_prototype("gearbox", "intermediate-product-gearbox", "01")
-util.regroup.set_subgroup_to_prototype("advanced-gearbox", "intermediate-product-gearbox", "02")
-util.regroup.set_subgroup_to_prototype("elite-gearbox", "intermediate-product-gearbox", "03")
-util.regroup.set_subgroup_to_prototype("gearbox-iridium", "intermediate-product-gearbox", "04")
+util.regroup.set_subgroup_to_prototype("gearbox-iridium", "intermediate-product-gearbox", "02")
+util.regroup.set_subgroup_to_prototype("advanced-gearbox", "intermediate-product-gearbox", "03")
+util.regroup.set_subgroup_to_prototype("elite-gearbox", "intermediate-product-gearbox", "04")
 util.regroup.set_subgroup_to_prototype("se-heavy-assembly", "intermediate-product-gearbox", "05")
 
 -- intermediate-product-articulated

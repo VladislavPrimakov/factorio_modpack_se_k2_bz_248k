@@ -1,3 +1,10 @@
+Version: 1.0.38
+Date: 31. 05. 2024
+  Changes:
+  - Improved regroup and restack.
+  - Added advanced centrifuge mod.
+  - More expensive rocket fluid recipes.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.37
 Date: 02. 04. 2024
   Changes:

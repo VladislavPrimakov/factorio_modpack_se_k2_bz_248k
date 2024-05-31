@@ -41,6 +41,7 @@ util.regroup.set_subgroup_to_prototype("steam-engine", "production-energy", "09"
 util.regroup.set_subgroup_to_prototype("steam-turbine", "production-energy", "10")
 util.regroup.set_subgroup_to_prototype("se-condenser-turbine", "production-energy", "11")
 util.regroup.set_subgroup_to_prototype("kr-advanced-steam-turbine", "production-energy", "12")
+util.regroup.set_subgroup_to_prototype("se-kr-advanced-condenser-turbine", "production-energy", "13")
 util.regroup.set_subgroup_to_prototype("se-big-turbine", "production-energy", "13")
 util.regroup.set_subgroup_to_prototype("se-fluid-burner-generator", "production-energy", "14")
 
@@ -59,13 +60,14 @@ util.regroup.set_subgroup_to_prototype("fu_stelar_reactor_recipe", "production-e
 
 -- production-nuclear
 util.regroup.set_subgroup_to_prototype("centrifuge", "production-nuclear", "01")
-util.regroup.set_subgroup_to_prototype("se-space-radiation-laboratory", "production-nuclear", "02")
-util.regroup.set_subgroup_to_prototype("heat-exchanger", "production-nuclear", "03")
-util.regroup.set_subgroup_to_prototype("heat-pipe", "production-nuclear", "04")
-util.regroup.set_subgroup_to_prototype("se-big-heat-exchanger", "production-energy", "05")
-util.regroup.set_subgroup_to_prototype("se-naquium-heat-pipe", "production-nuclear", "05")
-util.regroup.set_subgroup_to_prototype("se-naquium-heat-pipe-long--+--", "production-nuclear", "06")
-util.regroup.set_subgroup_to_prototype("se-naquium-heat-pipe-long--+-----+--", "production-nuclear", "07")
+util.regroup.set_subgroup_to_prototype("k11-advanced-centrifuge", "production-nuclear", "02")
+util.regroup.set_subgroup_to_prototype("se-space-radiation-laboratory", "production-nuclear", "03")
+util.regroup.set_subgroup_to_prototype("heat-exchanger", "production-nuclear", "04")
+util.regroup.set_subgroup_to_prototype("heat-pipe", "production-nuclear", "05")
+util.regroup.set_subgroup_to_prototype("se-big-heat-exchanger", "production-nuclear", "06")
+util.regroup.set_subgroup_to_prototype("se-naquium-heat-pipe", "production-nuclear", "07")
+util.regroup.set_subgroup_to_prototype("se-naquium-heat-pipe-long--+--", "production-nuclear", "08")
+util.regroup.set_subgroup_to_prototype("se-naquium-heat-pipe-long--+-----+--", "production-nuclear", "09")
 
 -- production-solar-panels
 util.regroup.set_subgroup_to_prototype("solar-panel", "production-solar-panels", "01")

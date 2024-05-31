@@ -198,7 +198,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         if settings.startup["Modpack-ReStack-resources"].value then
                             if startPosCoreFragment == nil and startPosOre == nil and isItemOres == nil and startPosIngot == nil then
                                 util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-resources"]
-                                .value)
+                                    .value)
                             end
                         end
                         if settings.startup["Modpack-ReStack-ores"].value then
@@ -251,41 +251,54 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                 end
                 -- combat
                 if data.raw["item-subgroup"][item.subgroup].group == "combat" then
+                    if settings.startup["Modpack-ReStack-combat-utility"].value then
+                        if item.subgroup == "combat-tool" or item.subgroup == "combat-defensive-structure" then
+                            util.restack.restack(type, item.name,
+                                settings.startup["Modpack-ReStack-combat-utility"].value)
+                        end
+                    end
                     if settings.startup["Modpack-ReStack-turret"].value then
-                        local startPosTurret = string.find(item.name, "turret")
-                        local startPosGun = string.find(item.name, "item%-rampant%-arsenal")
-                        local startPosAcidCannon = string.find(item.name, "acid%-cannon")
-                        local startPosWagonCannon = string.find(item.name, "wagon%-cannon")
-                        if startPosTurret or startPosGun or startPosAcidCannon or startPosWagonCannon then
-                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-turret"].value)
+                        if item.place_result then
+                            if data.raw["ammo-turret"][item.place_result]
+                                or data.raw["electric-turret"][item.place_result]
+                                or data.raw["artillery-turret"][item.place_result]
+                                or data.raw["fluid-turret"][item.place_result]
+                            then
+                                util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-turret"].value)
+                            end
                         end
                     end
                     if settings.startup["Modpack-ReStack-magazine"].value then
-                        if item.subgroup == "combat-dart"
-                            or item.subgroup == "combat-firearm"
-                            or item.subgroup == "combat-shotgun"
-                            or item.subgroup == "combat-large-rifle"
-                            or item.subgroup == "combat-rifle"
-                            or item.subgroup == "combat-flamethrower"
-                            or item.subgroup == "combat-se-gun"
-                            or item.subgroup == "combat-capsule"
-                            or item.subgroup == "combat-cannon"
-                            or item.subgroup == "combat-railgun"
+                        if (item.subgroup == "combat-dart"
+                                or item.subgroup == "combat-firearm"
+                                or item.subgroup == "combat-shotgun"
+                                or item.subgroup == "combat-large-rifle"
+                                or item.subgroup == "combat-rifle"
+                                or item.subgroup == "combat-flamethrower"
+                                or item.subgroup == "combat-se-gun"
+                                or item.subgroup == "combat-capsule"
+                                or item.subgroup == "combat-cannon"
+                                or item.subgroup == "combat-railgun")
+                            and
+                            item.type == "ammo"
                         then
-                            local startPosMagazine = string.find(item.name, "magazine")
-                            local startPosShell = string.find(item.name, "shell")
-                            local startPosAmmo = string.find(item.name, "ammo")
-                            local startPosCapsule = string.find(item.name, "capsule")
-                            local startPosLandmine = string.find(item.name, "landmine")
-                            local startPosGrenade = string.find(item.name, "grenade")
-                            if startPosMagazine and startPosShell and startPosAmmo and startPosCapsule and startPosLandmine and startPosGrenade then
-                                util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-magazine"].value)
-                            end
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-magazine"].value)
+                        end
+                    end
+                    if settings.startup["Modpack-ReStack-rocket"].value then
+                        if (item.subgroup == "combat-rocket-turret" or item.subgroup == "combat-rocket") and item.type == "ammo" then
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-rocket"].value)
                         end
                     end
                     if settings.startup["Modpack-ReStack-grenade"].value then
                         if item.subgroup == "combat-grenade" then
                             util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-grenade"].value)
+                        end
+                    end
+                    if settings.startup["Modpack-ReStack-artillery-shell"].value then
+                        if item.subgroup == "combat-artillery" and item.type == "ammo" then
+                            util.restack.restack(type, item.name,
+                                settings.startup["Modpack-ReStack-artillery-shell"].value)
                         end
                     end
                 end
