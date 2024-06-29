@@ -12,6 +12,7 @@ require("groups/combat")
 require("groups/equipment")
 require("groups/fluids")
 require("groups/fluid")
+require("groups/bio-industries")
 
 
 data.raw["item-group"]["logistics"].order = "01"

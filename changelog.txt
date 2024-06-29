@@ -1,3 +1,10 @@
+Version: 1.0.39
+Date: 08. 06. 2024
+  Changes:
+  - Removed 248k modules.
+  - Removed KIX2 techology.
+  - Improved Item Ordering.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.38
 Date: 31. 05. 2024
   Changes:

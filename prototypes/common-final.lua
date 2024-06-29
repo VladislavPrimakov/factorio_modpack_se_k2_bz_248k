@@ -1,5 +1,22 @@
 local util = require("functions/util")
 
+-- remoe 248k moddules
+data.raw["technology"]["fi_modules_1_tech"] = nil
+data.raw["technology"]["fi_modules_2_tech"] = nil
+data.raw["technology"]["fi_modules_3_tech"] = nil
+data.raw["technology"]["fi_modules_4_tech"] = nil
+data.raw["technology"]["fi_modules_5_tech"] = nil
+data.raw["technology"]["fi_modules_6_tech"] = nil
+
+data.raw["recipe"]["fi_modules_productivity_1_recipe"] = nil
+data.raw["recipe"]["fi_modules_productivity_2_recipe"] = nil
+data.raw["recipe"]["fi_modules_productivity_3_recipe"] = nil
+data.raw["recipe"]["fi_modules_productivity_4_recipe"] = nil
+data.raw["recipe"]["fi_modules_productivity_5_recipe"] = nil
+data.raw["recipe"]["fi_modules_productivity_6_recipe"] = nil
+
+data.raw["technology"]["fu_ki_plus_2_tech"] = nil
+
 -- restack
 util.restack.restack("item", "gr_materials_circuit", 200)
 util.restack.restack("item", "fu_tech_sign_item", 100)

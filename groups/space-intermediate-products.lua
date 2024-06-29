@@ -27,45 +27,34 @@ util.regroup.create_subgroup("matter-conversion", "space-intermediate-products",
 
 -- space-intermediate-product-specialist-assembling
 util.regroup.set_subgroup_to_prototype("se-space-mirror", "space-intermediate-product-specialist-assembling", "01")
-util.regroup.set_subgroup_to_prototype("se-space-mirror-alternate", "space-intermediate-product-specialist-assembling",
-    "02")
+util.regroup.set_subgroup_to_prototype("se-space-mirror-alternate", "space-intermediate-product-specialist-assembling", "02")
 util.regroup.set_subgroup_to_prototype("se-gammaray-detector", "space-intermediate-product-specialist-assembling", "03")
-util.regroup.set_subgroup_to_prototype("se-material-testing-pack", "space-intermediate-product-specialist-assembling",
-    "04")
+util.regroup.set_subgroup_to_prototype("se-material-testing-pack", "space-intermediate-product-specialist-assembling", "04")
 util.regroup.set_subgroup_to_prototype("se-naquium-cube", "space-intermediate-product-specialist-assembling", "05")
 util.regroup.set_subgroup_to_prototype("se-naquium-tessaract", "space-intermediate-product-specialist-assembling", "06")
-util.regroup.set_subgroup_to_prototype("se-naquium-tessaract-alt", "space-intermediate-product-specialist-assembling",
-    "07")
+util.regroup.set_subgroup_to_prototype("se-naquium-tessaract-alt", "space-intermediate-product-specialist-assembling", "07")
 
 -- space-intermediate-product-observation-frame
 util.regroup.set_subgroup_to_prototype("se-observation-frame-blank", "space-intermediate-product-observation-frame", "01")
-util.regroup.set_subgroup_to_prototype("se-observation-frame-blank-beryllium",
-    "space-intermediate-product-observation-frame",
-    "02")
+util.regroup.set_subgroup_to_prototype("se-observation-frame-blank-beryllium", "space-intermediate-product-observation-frame", "02")
 util.regroup.set_subgroup_to_prototype("se-observation-frame-radio", "space-intermediate-product-observation-frame", "03")
-util.regroup.set_subgroup_to_prototype("se-observation-frame-microwave", "space-intermediate-product-observation-frame",
-    "04")
-util.regroup.set_subgroup_to_prototype("se-observation-frame-infrared", "space-intermediate-product-observation-frame",
-    "05")
-util.regroup.set_subgroup_to_prototype("se-observation-frame-visible", "space-intermediate-product-observation-frame",
-    "06")
+util.regroup.set_subgroup_to_prototype("se-observation-frame-microwave", "space-intermediate-product-observation-frame", "04")
+util.regroup.set_subgroup_to_prototype("se-observation-frame-infrared", "space-intermediate-product-observation-frame", "05")
+util.regroup.set_subgroup_to_prototype("se-observation-frame-visible", "space-intermediate-product-observation-frame", "06")
 util.regroup.set_subgroup_to_prototype("se-observation-frame-uv", "space-intermediate-product-observation-frame", "07")
 util.regroup.set_subgroup_to_prototype("se-observation-frame-xray", "space-intermediate-product-observation-frame", "08")
-util.regroup.set_subgroup_to_prototype("se-observation-frame-gammaray", "space-intermediate-product-observation-frame",
-    "09")
+util.regroup.set_subgroup_to_prototype("se-observation-frame-gammaray", "space-intermediate-product-observation-frame", "09")
 
 -- space-intermediate-product-thermofluid
 util.regroup.set_subgroup_to_prototype("se-space-coolant", "space-intermediate-product-thermofluid", "01")
 util.regroup.set_subgroup_to_prototype("se-space-coolant-cryonite", "space-intermediate-product-thermofluid", "02")
 util.regroup.set_subgroup_to_prototype("se-radiating-space-coolant-slow", "space-intermediate-product-thermofluid", "03")
-util.regroup.set_subgroup_to_prototype("se-radiating-space-coolant-normal", "space-intermediate-product-thermofluid",
-    "04")
+util.regroup.set_subgroup_to_prototype("se-radiating-space-coolant-normal", "space-intermediate-product-thermofluid", "04")
 util.regroup.set_subgroup_to_prototype("se-radiating-space-coolant-fast", "space-intermediate-product-thermofluid", "05")
 util.regroup.set_subgroup_to_prototype("se-space-coolant-cold", "space-intermediate-product-thermofluid", "06")
 util.regroup.set_subgroup_to_prototype("se-space-coolant-cold-cryonite", "space-intermediate-product-thermofluid", "07")
 util.regroup.set_subgroup_to_prototype("se-space-coolant-supercooled", "space-intermediate-product-thermofluid", "08")
-util.regroup.set_subgroup_to_prototype("se-space-coolant-supercooled-cryonite", "space-intermediate-product-thermofluid",
-    "09")
+util.regroup.set_subgroup_to_prototype("se-space-coolant-supercooled-cryonite", "space-intermediate-product-thermofluid", "09")
 
 -- space-intermediate-product-specimen
 util.regroup.set_subgroup_to_prototype("se-specimen-fish", "space-intermediate-product-specimen", "01")
@@ -112,10 +101,10 @@ util.regroup.set_subgroup_to_prototype("se-antimatter-canister", "space-intermed
 
 -- space-intermediate-product-stream
 util.regroup.set_subgroup_to_prototype("se-plasma-stream", "space-intermediate-product-stream", "01")
-util.regroup.set_subgroup_to_prototype("se-ion-stream", "space-intermediate-product-stream", "01")
-util.regroup.set_subgroup_to_prototype("se-proton-stream", "space-intermediate-product-stream", "01")
-util.regroup.set_subgroup_to_prototype("se-particle-stream", "space-intermediate-product-stream", "01")
-util.regroup.set_subgroup_to_prototype("se-antimatter-stream", "space-intermediate-product-stream", "01")
+util.regroup.set_subgroup_to_prototype("se-ion-stream", "space-intermediate-product-stream", "02")
+util.regroup.set_subgroup_to_prototype("se-proton-stream", "space-intermediate-product-stream", "03")
+util.regroup.set_subgroup_to_prototype("se-particle-stream", "space-intermediate-product-stream", "04")
+util.regroup.set_subgroup_to_prototype("se-antimatter-stream", "space-intermediate-product-stream", "05")
 
 -- space-intermediate-product-gel
 util.regroup.set_subgroup_to_prototype("se-chemical-gel", "space-intermediate-product-gel", "01")
@@ -134,56 +123,35 @@ util.regroup.set_subgroup_to_prototype("se-bio-sludge-from-vitamelange", "space-
 util.regroup.set_subgroup_to_prototype("se-bio-sludge-decontamination", "space-intermediate-product-sludge", "07")
 
 -- space-intermediate-product-particle-stream
-util.regroup.set_subgroup_to_prototype("se-kr-experimental-matter-processing",
-    "space-intermediate-product-particle-stream",
-    "01")
-util.regroup.set_subgroup_to_prototype("se-kr-stone-to-particle-stream", "space-intermediate-product-particle-stream",
-    "02")
-util.regroup.set_subgroup_to_prototype("se-kr-iron-to-particle-stream", "space-intermediate-product-particle-stream",
-    "03")
-util.regroup.set_subgroup_to_prototype("se-kr-copper-to-particle-stream", "space-intermediate-product-particle-stream",
-    "04")
-util.regroup.set_subgroup_to_prototype("se-kr-uranium-to-particle-stream", "space-intermediate-product-particle-stream",
-    "05")
-util.regroup.set_subgroup_to_prototype("se-kr-rare-metals-to-particle-stream",
-    "space-intermediate-product-particle-stream",
-    "06")
-util.regroup.set_subgroup_to_prototype("aluminum-ore-to-particle-stream", "space-intermediate-product-particle-stream",
-    "07")
+util.regroup.set_subgroup_to_prototype("se-kr-experimental-matter-processing", "space-intermediate-product-particle-stream", "01")
+util.regroup.set_subgroup_to_prototype("se-kr-stone-to-particle-stream", "space-intermediate-product-particle-stream", "02")
+util.regroup.set_subgroup_to_prototype("se-kr-iron-to-particle-stream", "space-intermediate-product-particle-stream", "03")
+util.regroup.set_subgroup_to_prototype("se-kr-copper-to-particle-stream", "space-intermediate-product-particle-stream", "04")
+util.regroup.set_subgroup_to_prototype("se-kr-uranium-to-particle-stream", "space-intermediate-product-particle-stream", "05")
+util.regroup.set_subgroup_to_prototype("se-kr-rare-metals-to-particle-stream", "space-intermediate-product-particle-stream", "06")
+util.regroup.set_subgroup_to_prototype("aluminum-ore-to-particle-stream", "space-intermediate-product-particle-stream", "07")
 util.regroup.set_subgroup_to_prototype("lead-ore-to-particle-stream", "space-intermediate-product-particle-stream", "08")
-util.regroup.set_subgroup_to_prototype("flake-graphite-to-particle-stream", "space-intermediate-product-particle-stream",
-    "09")
+util.regroup.set_subgroup_to_prototype("flake-graphite-to-particle-stream", "space-intermediate-product-particle-stream", "09")
 util.regroup.set_subgroup_to_prototype("zircon-to-particle-stream", "space-intermediate-product-particle-stream", "10")
 util.regroup.set_subgroup_to_prototype("tin-ore-to-particle-stream", "space-intermediate-product-particle-stream", "11")
-util.regroup.set_subgroup_to_prototype("silver-ore-to-particle-stream", "space-intermediate-product-particle-stream",
-    "12")
-util.regroup.set_subgroup_to_prototype("titanium-ore-to-particle-stream", "space-intermediate-product-particle-stream",
-    "13")
-util.regroup.set_subgroup_to_prototype("tungsten-ore-to-particle-stream", "space-intermediate-product-particle-stream",
-    "14")
-util.regroup.set_subgroup_to_prototype("bismuth-ore-to-particle-stream", "space-intermediate-product-particle-stream",
-    "15")
+util.regroup.set_subgroup_to_prototype("silver-ore-to-particle-stream", "space-intermediate-product-particle-stream", "12")
+util.regroup.set_subgroup_to_prototype("titanium-ore-to-particle-stream", "space-intermediate-product-particle-stream", "13")
+util.regroup.set_subgroup_to_prototype("tungsten-ore-to-particle-stream", "space-intermediate-product-particle-stream", "14")
+util.regroup.set_subgroup_to_prototype("bismuth-ore-to-particle-stream", "space-intermediate-product-particle-stream", "15")
 util.regroup.set_subgroup_to_prototype("gold-ore-to-particle-stream", "space-intermediate-product-particle-stream", "16")
-util.regroup.set_subgroup_to_prototype("se-kr-cryonite-to-particle-stream", "space-intermediate-product-particle-stream",
-    "17")
-util.regroup.set_subgroup_to_prototype("se-kr-vulcanite-to-particle-stream", "space-intermediate-product-particle-stream",
-    "18")
-util.regroup.set_subgroup_to_prototype("se-kr-imersite-to-particle-stream", "space-intermediate-product-particle-stream",
-    "19")
-util.regroup.set_subgroup_to_prototype("se-kr-beryllium-to-particle-stream", "space-intermediate-product-particle-stream",
-    "20")
-util.regroup.set_subgroup_to_prototype("se-kr-holmium-to-particle-stream", "space-intermediate-product-particle-stream",
-    "21")
-util.regroup.set_subgroup_to_prototype("se-kr-iridium-to-particle-stream", "space-intermediate-product-particle-stream",
-    "22")
+util.regroup.set_subgroup_to_prototype("se-kr-cryonite-to-particle-stream", "space-intermediate-product-particle-stream", "17")
+util.regroup.set_subgroup_to_prototype("se-kr-vulcanite-to-particle-stream", "space-intermediate-product-particle-stream", "18")
+util.regroup.set_subgroup_to_prototype("se-kr-imersite-to-particle-stream", "space-intermediate-product-particle-stream", "19")
+util.regroup.set_subgroup_to_prototype("se-kr-beryllium-to-particle-stream", "space-intermediate-product-particle-stream", "20")
+util.regroup.set_subgroup_to_prototype("se-kr-holmium-to-particle-stream", "space-intermediate-product-particle-stream", "21")
+util.regroup.set_subgroup_to_prototype("se-kr-iridium-to-particle-stream", "space-intermediate-product-particle-stream", "22")
 
 -- space-intermediate-product-materialisation
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-stone", "space-intermediate-product-materialisation", "01")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-iron", "space-intermediate-product-materialisation", "02")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-copper", "space-intermediate-product-materialisation", "03")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-uranium", "space-intermediate-product-materialisation", "04")
-util.regroup.set_subgroup_to_prototype("se-matter-fusion-raw-rare-metals", "space-intermediate-product-materialisation",
-    "05")
+util.regroup.set_subgroup_to_prototype("se-matter-fusion-raw-rare-metals", "space-intermediate-product-materialisation", "05")
 util.regroup.set_subgroup_to_prototype("matter-fusion-aluminum-ore", "space-intermediate-product-materialisation", "06")
 util.regroup.set_subgroup_to_prototype("matter-fusion-lead-ore", "space-intermediate-product-materialisation", "07")
 util.regroup.set_subgroup_to_prototype("matter-fusion-flake-graphite", "space-intermediate-product-materialisation", "08")
@@ -196,8 +164,7 @@ util.regroup.set_subgroup_to_prototype("matter-fusion-bismuth-ore", "space-inter
 util.regroup.set_subgroup_to_prototype("matter-fusion-gold-ore", "space-intermediate-product-materialisation", "15")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-cryonite", "space-intermediate-product-materialisation", "16")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-vulcanite", "space-intermediate-product-materialisation", "17")
-util.regroup.set_subgroup_to_prototype("se-matter-fusion-raw-imersite", "space-intermediate-product-materialisation",
-    "18")
+util.regroup.set_subgroup_to_prototype("se-matter-fusion-raw-imersite", "space-intermediate-product-materialisation", "18")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-beryllium", "space-intermediate-product-materialisation", "19")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-holmium", "space-intermediate-product-materialisation", "20")
 util.regroup.set_subgroup_to_prototype("se-matter-fusion-iridium", "space-intermediate-product-materialisation", "21")

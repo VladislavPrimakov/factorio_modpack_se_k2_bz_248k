@@ -2,35 +2,39 @@ local util = require("functions/util")
 
 util.regroup.create_subgroup("science-pack", "science", "raw-01")
 
-util.regroup.create_subgroup("248k-fu-pack-1", "science", "raw-021")
-util.regroup.create_subgroup("248k-fu-pack-2", "science", "raw-022")
+util.regroup.create_subgroup("248k-fu-pack-1", "science", "raw-02")
+util.regroup.create_subgroup("248k-fu-pack-2", "science", "raw-03")
 
-util.regroup.create_subgroup("data-generic", "science", "raw-03")
-util.regroup.create_subgroup("data-significant", "science", "raw-04")
+util.regroup.create_subgroup("data-generic", "science", "raw-04")
+util.regroup.create_subgroup("data-significant", "science", "raw-05")
 
-util.regroup.create_subgroup("data-catalogue-astronomic", "science", "raw-051")
-util.regroup.create_subgroup("data-astronomic", "science", "raw-052")
-util.regroup.create_subgroup("astronomic-science-pack", "science", "raw-053")
+util.regroup.create_subgroup("data-catalogue-astronomic", "science", "raw-06")
+util.regroup.create_subgroup("data-astronomic", "science", "raw-07")
+util.regroup.create_subgroup("astronomic-science-pack", "science", "raw-08")
 
-util.regroup.create_subgroup("data-catalogue-biological", "science", "raw-061")
-util.regroup.create_subgroup("data-biological", "science", "raw-062")
-util.regroup.create_subgroup("biological-science-pack", "science", "raw-063")
+util.regroup.create_subgroup("data-catalogue-biological", "science", "raw-09")
+util.regroup.create_subgroup("data-biological", "science", "raw-10")
+util.regroup.create_subgroup("biological-science-pack", "science", "raw-11")
 
-util.regroup.create_subgroup("data-catalogue-energy", "science", "raw-071")
-util.regroup.create_subgroup("data-energy", "science", "raw-072")
-util.regroup.create_subgroup("energy-science-pack", "science", "raw-073")
+util.regroup.create_subgroup("data-catalogue-energy", "science", "raw-12")
+util.regroup.create_subgroup("data-energy", "science", "raw-13")
+util.regroup.create_subgroup("energy-science-pack", "science", "raw-14")
 
-util.regroup.create_subgroup("data-catalogue-material", "science", "raw-081")
-util.regroup.create_subgroup("data-material", "science", "raw-082")
-util.regroup.create_subgroup("material-science-pack", "science", "raw-083")
+util.regroup.create_subgroup("data-catalogue-material", "science", "raw-15")
+util.regroup.create_subgroup("data-material", "science", "raw-16")
+util.regroup.create_subgroup("material-science-pack", "science", "raw-17")
 
-util.regroup.create_subgroup("data-catalogue-matter", "science", "raw-091")
-util.regroup.create_subgroup("data-matter", "science", "raw-092")
-util.regroup.create_subgroup("matter-science-pack", "science", "raw-093")
+util.regroup.create_subgroup("data-catalogue-matter", "science", "raw-18")
+util.regroup.create_subgroup("data-matter", "science", "raw-19")
+util.regroup.create_subgroup("matter-science-pack", "science", "raw-20")
 
-util.regroup.create_subgroup("data-catalogue-deep", "science", "raw-101")
-util.regroup.create_subgroup("data-deep", "science", "raw-102")
-util.regroup.create_subgroup("deep-science-pack", "science", "raw-103")
+util.regroup.create_subgroup("data-catalogue-advanced", "science", "raw-21")
+util.regroup.create_subgroup("data-advanced", "science", "raw-22")
+util.regroup.create_subgroup("advanced-science-pack", "science", "raw-23")
+
+util.regroup.create_subgroup("data-catalogue-deep", "science", "raw-24")
+util.regroup.create_subgroup("data-deep", "science", "raw-25")
+util.regroup.create_subgroup("deep-science-pack", "science", "raw-26")
 
 -- 248k-fu-pack-1
 util.regroup.set_subgroup_to_prototype("fu_materials_fusion_card", "248k-fu-pack-1", "01")

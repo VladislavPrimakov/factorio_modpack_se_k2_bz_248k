@@ -182,12 +182,12 @@ util.regroup.set_subgroup_to_prototype("fu_robo_construction_recipe", "logistic-
 -- logistic-network
 util.regroup.set_subgroup_to_prototype("roboport", "logistic-network", "01")
 util.regroup.set_subgroup_to_prototype("fi_robo_charger_item", "logistic-network", "02")
-util.regroup.set_subgroup_to_prototype("fi_robo_charger_recipe", "logistic-network", "02")
-util.regroup.set_subgroup_to_prototype("fi_robo_port_item", "logistic-network", "03")
-util.regroup.set_subgroup_to_prototype("fi_robo_port_recipe", "logistic-network", "03")
-util.regroup.set_subgroup_to_prototype("kr-small-roboport", "logistic-network", "04")
-util.regroup.set_subgroup_to_prototype("kr-large-roboport", "logistic-network", "05")
-util.regroup.set_subgroup_to_prototype("se-supercharger", "logistic-network", "06")
+util.regroup.set_subgroup_to_prototype("fi_robo_charger_recipe", "logistic-network", "03")
+util.regroup.set_subgroup_to_prototype("fi_robo_port_item", "logistic-network", "04")
+util.regroup.set_subgroup_to_prototype("fi_robo_port_recipe", "logistic-network", "05")
+util.regroup.set_subgroup_to_prototype("kr-small-roboport", "logistic-network", "06")
+util.regroup.set_subgroup_to_prototype("kr-large-roboport", "logistic-network", "07")
+util.regroup.set_subgroup_to_prototype("se-supercharger", "logistic-network", "08")
 
 -- logistic-circuit-network
 util.regroup.set_subgroup_to_prototype("small-lamp", "logistic-circuit-network", "01")
