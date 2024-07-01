@@ -1,6 +1,6 @@
 local util = require("functions/util")
 
--- remoe 248k moddules
+-- remove 248k modules
 data.raw["technology"]["fi_modules_1_tech"] = nil
 data.raw["technology"]["fi_modules_2_tech"] = nil
 data.raw["technology"]["fi_modules_3_tech"] = nil
@@ -15,7 +15,80 @@ data.raw["recipe"]["fi_modules_productivity_4_recipe"] = nil
 data.raw["recipe"]["fi_modules_productivity_5_recipe"] = nil
 data.raw["recipe"]["fi_modules_productivity_6_recipe"] = nil
 
-data.raw["technology"]["fu_ki_plus_2_tech"] = nil
+data.raw["technology"]["fu_ki_plus_2_tech"].hidden = true
+
+-- remove star engine
+-- remove entities
+data.raw["assembling-machine"]["fu_star_engine_core_entity"] = nil
+data.raw["assembling-machine"]["fu_star_engine_cooler_entity"] = nil
+data.raw["assembling-machine"]["fu_star_engine_cooler_up_entity"] = nil
+data.raw["assembling-machine"]["fu_star_engine_heater_entity"] = nil
+data.raw["assembling-machine"]["fu_star_engine_heater_left_entity"] = nil
+
+-- remove recipes
+data.raw["recipe"]["fu_star_engine_core_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_cooler_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_cooler_up_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_heater_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_heater_left_recipe"] = nil
+
+data.raw["recipe"]["fu_burn_fu_star_engine_cooler_item_recipe"] = nil
+data.raw["recipe"]["fu_burn_fu_star_engine_cooler_up_item_recipe"] = nil
+data.raw["recipe"]["fu_burn_fu_star_engine_core_item_recipe"] = nil
+data.raw["recipe"]["fu_burn_fu_star_engine_heater_item_recipe"] = nil
+data.raw["recipe"]["fu_burn_fu_star_engine_heater_left_item_recipe"] = nil
+
+data.raw["recipe"]["gr_wheel_recipe"] = nil
+data.raw["recipe"]["gr_steel_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_heater_1_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_caster_1_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_cooler_1_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_core_1_recipe"] = nil
+
+data.raw["recipe"]["fu_star_engine_cooler_2_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_core_2_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_caster_2_recipe"] = nil
+
+data.raw["recipe"]["fu_star_engine_cooler_3_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_core_3_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_caster_3_recipe"] = nil
+
+data.raw["recipe"]["fu_star_engine_cooler_4_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_core_4_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_caster_4_recipe"] = nil
+
+data.raw["recipe"]["fu_star_engine_cooler_5_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_core_5_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_caster_5_recipe"] = nil
+
+data.raw["recipe"]["fu_star_engine_cooler_6_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_core_6_recipe"] = nil
+data.raw["recipe"]["fu_star_engine_caster_6_recipe"] = nil
+
+data.raw["recipe"]["fu_star_engine_cooler_7_recipe"] = nil
+
+data.raw["recipe"]["248k-nickel-atom-hot"] = nil
+data.raw["recipe"]["248k-nickel-atom"] = nil
+data.raw["recipe"]["nickel-from-atoms"] = nil
+data.raw["recipe"]["invar-from-atoms"] = nil
+
+data.raw["recipe"]["248k-zinc-atom-hot"] = nil
+data.raw["recipe"]["248k-zinc-atom"] = nil
+data.raw["recipe"]["zinc-from-atoms"] = nil
+data.raw["recipe"]["brass-from-atoms"] = nil
+
+-- remove technologies
+data.raw["technology"]["fu_star_engine_tech"] = nil
+data.raw["technology"]["fu_star_engine_iron_tech"] = nil
+data.raw["technology"]["fu_star_engine_copper_tech"] = nil
+data.raw["technology"]["fu_star_engine_sulfur_tech"] = nil
+data.raw["technology"]["fu_star_engine_lithium_7_tech"] = nil
+data.raw["technology"]["fu_star_engine_uranium_238_tech"] = nil
+data.raw["technology"]["fu_star_engine_uranium_235_tech"] = nil
+data.raw["technology"]["nickel-fusion-processing"] = nil
+data.raw["technology"]["zinc-fusion-processing"] = nil
+data.raw["technology"]["gr_star_engine_1_tech"] = nil
+data.raw["technology"]["gr_star_engine_2_tech"] = nil
 
 -- restack
 util.restack.restack("item", "gr_materials_circuit", 200)
@@ -389,6 +462,7 @@ util.equipment.add_category_to_equipment("equipment-bot-chip-trees", "eq-charact
 util.equipment.add_category_to_equipment("equipment-bot-chip-feeder", "eq-character")
 util.equipment.add_category_to_equipment("equipment-bot-chip-nanointerface", "eq-character")
 util.equipment.add_category_to_equipment("fi_equipment_player_reactor_item", "eq-character")
+util.equipment.add_category_to_equipment("gr_materials_charge_item", "eq-character")
 
 util.equipment.add_category_to_equipment("battery-equipment", "eq-battery")
 util.equipment.add_category_to_equipment("big-battery-equipment", "eq-battery")

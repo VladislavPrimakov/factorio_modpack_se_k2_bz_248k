@@ -19,13 +19,12 @@ util.regroup.create_subgroup("production-mechanical", "production", "raw-16")
 util.regroup.create_subgroup("production-248k-el", "production", "raw-17")
 util.regroup.create_subgroup("production-248k-fi", "production", "raw-18")
 util.regroup.create_subgroup("production-248k-fu", "production", "raw-19")
-util.regroup.create_subgroup("production-248k-fu-star-engine", "production", "raw-19")
-util.regroup.create_subgroup("production-plasma", "production", "raw-20")
-util.regroup.create_subgroup("production-cooling", "production", "raw-21")
-util.regroup.create_subgroup("production-computation", "production", "raw-22")
-util.regroup.create_subgroup("production-telescope", "production", "raw-23")
-util.regroup.create_subgroup("production-beaming", "production", "raw-24")
-util.regroup.create_subgroup("production-lab", "production", "raw-25")
+util.regroup.create_subgroup("production-plasma", "production", "raw-19")
+util.regroup.create_subgroup("production-cooling", "production", "raw-20")
+util.regroup.create_subgroup("production-computation", "production", "raw-21")
+util.regroup.create_subgroup("production-telescope", "production", "raw-22")
+util.regroup.create_subgroup("production-beaming", "production", "raw-23")
+util.regroup.create_subgroup("production-lab", "production", "raw-24")
 
 -- production-energy
 util.regroup.set_subgroup_to_prototype("boiler", "production-energy", "01")
@@ -247,18 +246,6 @@ util.regroup.set_subgroup_to_prototype("fu_boiler_recipe", "production-248k-fu",
 util.regroup.set_subgroup_to_prototype("fu_boiler_item", "production-248k-fu", "16")
 util.regroup.set_subgroup_to_prototype("fu_exchanger_recipe", "production-248k-fu", "17")
 util.regroup.set_subgroup_to_prototype("fu_exchanger_item", "production-248k-fu", "18")
-
--- production-248k-fu-star-engine
-util.regroup.set_subgroup_to_prototype("fu_star_engine_core_recipe", "production-248k-fu-star-engine", "01")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_core_item", "production-248k-fu-star-engine", "02")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_cooler_up_recipe", "production-248k-fu-star-engine", "03")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_cooler_up_item", "production-248k-fu-star-engine", "04")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_cooler_recipe", "production-248k-fu-star-engine", "05")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_cooler_item", "production-248k-fu-star-engine", "06")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_heater_left_recipe", "production-248k-fu-star-engine", "07")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_heater_left_item", "production-248k-fu-star-engine", "08")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_heater_recipe", "production-248k-fu-star-engine", "09")
-util.regroup.set_subgroup_to_prototype("fu_star_engine_heater_item", "production-248k-fu-star-engine", "10")
 
 -- production-plasma
 util.regroup.set_subgroup_to_prototype("se-space-electromagnetics-laboratory", "production-plasma", "01")

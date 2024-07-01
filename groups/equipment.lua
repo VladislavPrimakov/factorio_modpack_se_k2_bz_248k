@@ -97,6 +97,10 @@ util.regroup.set_subgroup_to_prototype("se-lifesupport-equipment-3", "equipment-
 util.regroup.set_subgroup_to_prototype("se-lifesupport-equipment-4", "equipment-character", "11")
 util.regroup.set_subgroup_to_prototype("belt-immunity-equipment", "equipment-character", "12")
 util.regroup.set_subgroup_to_prototype("energy-absorber", "equipment-character", "13")
+util.regroup.set_subgroup_to_prototype("gr_materials_charge_recipe", "equipment-character", "14")
+util.regroup.set_subgroup_to_prototype("gr_materials_charge_item", "equipment-character", "15")
+util.regroup.set_subgroup_to_prototype("gr_materials_charge_remote_recipe", "equipment-character", "16")
+util.regroup.set_subgroup_to_prototype("gr_materials_charge_remote", "equipment-character", "17")
 
 -- equipment-shield
 util.regroup.set_subgroup_to_prototype("se-adaptive-armour-equipment-1", "equipment-shield", "01")

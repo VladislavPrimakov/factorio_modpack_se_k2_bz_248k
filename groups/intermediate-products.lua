@@ -49,6 +49,10 @@ util.regroup.set_subgroup_to_prototype("fu_materials_upgrade", "intermediate-pro
 util.regroup.set_subgroup_to_prototype("fu_upgrade_recipe", "intermediate-product", "12")
 util.regroup.set_subgroup_to_prototype("gr_materials_upgrade", "intermediate-product", "13")
 util.regroup.set_subgroup_to_prototype("gr_upgrade_recipe", "intermediate-product", "14")
+util.regroup.set_subgroup_to_prototype("gr_materials_stack_up_item_recipe", "intermediate-product", "15")
+util.regroup.set_subgroup_to_prototype("gr_materials_stack_up_item", "intermediate-product", "16")
+util.regroup.set_subgroup_to_prototype("gr_materials_stack_down_item_recipe", "intermediate-product", "17")
+util.regroup.set_subgroup_to_prototype("gr_materials_stack_down_item", "intermediate-product", "18")
 
 -- intermediate-product-nuclear-cell
 util.regroup.set_subgroup_to_prototype("uranium-fuel-cell", "intermediate-product-nuclear-cell", "01")
@@ -81,20 +85,23 @@ util.regroup.set_subgroup_to_prototype("dt-fuel", "intermediate-product-other-ce
 util.regroup.set_subgroup_to_prototype("empty-antimatter-fuel-cell", "intermediate-product-other-cell", "03")
 util.regroup.set_subgroup_to_prototype("charged-antimatter-fuel-cell", "intermediate-product-other-cell", "04")
 util.regroup.set_subgroup_to_prototype("se-kr-basic-stabilizer", "intermediate-product-other-cell", "05")
-util.regroup.set_subgroup_to_prototype("se-kr-charged-basic-stabilizer", "intermediate-product-other-cell", "06")
-util.regroup.set_subgroup_to_prototype("matter-stabilizer", "intermediate-product-other-cell", "07")
-util.regroup.set_subgroup_to_prototype("charged-matter-stabilizer", "intermediate-product-other-cell", "08")
-util.regroup.set_subgroup_to_prototype("energy-control-unit", "intermediate-product-other-cell", "09")
-util.regroup.set_subgroup_to_prototype("fu_materials_empty_container", "intermediate-product-other-cell", "10")
-util.regroup.set_subgroup_to_prototype("fu_empty_container_recipe", "intermediate-product-other-cell", "10")
-util.regroup.set_subgroup_to_prototype("fu_materials_charged_container", "intermediate-product-other-cell", "11")
-util.regroup.set_subgroup_to_prototype("fu_stelerator_2_neutron_recipe", "intermediate-product-other-cell", "12")
-util.regroup.set_subgroup_to_prototype("fu_stelerator_3_neutron_recipe", "intermediate-product-other-cell", "13")
-util.regroup.set_subgroup_to_prototype("space-train-battery-pack", "intermediate-product-other-cell", "14")
-util.regroup.set_subgroup_to_prototype("pollution-filter", "intermediate-product-other-cell", "15")
-util.regroup.set_subgroup_to_prototype("restore-used-pollution-filter", "intermediate-product-other-cell", "16")
-util.regroup.set_subgroup_to_prototype("improved-pollution-filter", "intermediate-product-other-cell", "17")
-util.regroup.set_subgroup_to_prototype("restore-used-improved-pollution-filter", "intermediate-product-other-cell", "18")
+util.regroup.set_subgroup_to_prototype("se-kr-charge-basic-stabilizer", "intermediate-product-other-cell", "06")
+util.regroup.set_subgroup_to_prototype("se-kr-charged-basic-stabilizer", "intermediate-product-other-cell", "07")
+util.regroup.set_subgroup_to_prototype("matter-stabilizer", "intermediate-product-other-cell", "08")
+util.regroup.set_subgroup_to_prototype("charge-stabilizer", "intermediate-product-other-cell", "09")
+util.regroup.set_subgroup_to_prototype("charged-matter-stabilizer", "intermediate-product-other-cell", "10")
+util.regroup.set_subgroup_to_prototype("fu_materials_empty_container", "intermediate-product-other-cell", "11")
+util.regroup.set_subgroup_to_prototype("fu_empty_container_recipe", "intermediate-product-other-cell", "12")
+util.regroup.set_subgroup_to_prototype("fu_materials_charged_container", "intermediate-product-other-cell", "13")
+util.regroup.set_subgroup_to_prototype("fu_stelerator_2_neutron_recipe", "intermediate-product-other-cell", "14")
+util.regroup.set_subgroup_to_prototype("fu_stelerator_3_neutron_recipe", "intermediate-product-other-cell", "15")
+util.regroup.set_subgroup_to_prototype("gr_materials_fusion_cell_recipe", "intermediate-product-other-cell", "16")
+util.regroup.set_subgroup_to_prototype("gr_materials_fusion_cell_item", "intermediate-product-other-cell", "17")
+util.regroup.set_subgroup_to_prototype("space-train-battery-pack", "intermediate-product-other-cell", "18")
+util.regroup.set_subgroup_to_prototype("pollution-filter", "intermediate-product-other-cell", "19")
+util.regroup.set_subgroup_to_prototype("restore-used-pollution-filter", "intermediate-product-other-cell", "20")
+util.regroup.set_subgroup_to_prototype("improved-pollution-filter", "intermediate-product-other-cell", "21")
+util.regroup.set_subgroup_to_prototype("restore-used-improved-pollution-filter", "intermediate-product-other-cell", "22")
 
 -- intermediate-product-cable
 util.regroup.set_subgroup_to_prototype("copper-cable", "intermediate-product-cable", "01")
@@ -103,8 +110,10 @@ util.regroup.set_subgroup_to_prototype("silver-wire", "intermediate-product-cabl
 util.regroup.set_subgroup_to_prototype("tinned-cable", "intermediate-product-cable", "04")
 util.regroup.set_subgroup_to_prototype("optical-fiber", "intermediate-product-cable", "05")
 util.regroup.set_subgroup_to_prototype("acsr-cable", "intermediate-product-cable", "06")
-util.regroup.set_subgroup_to_prototype("se-holmium-cable", "intermediate-product-cable", "07")
-util.regroup.set_subgroup_to_prototype("se-superconductive-cable", "intermediate-product-cable", "08")
+util.regroup.set_subgroup_to_prototype("gr_gold_wire_recipe", "intermediate-product-cable", "07")
+util.regroup.set_subgroup_to_prototype("gr_materials_gold_wire", "intermediate-product-cable", "08")
+util.regroup.set_subgroup_to_prototype("se-holmium-cable", "intermediate-product-cable", "09")
+util.regroup.set_subgroup_to_prototype("se-superconductive-cable", "intermediate-product-cable", "10")
 
 -- intermediate-product-battery
 util.regroup.set_subgroup_to_prototype("battery", "intermediate-product-battery", "01")
@@ -187,10 +196,15 @@ util.regroup.set_subgroup_to_prototype("electric-engine-unit", "intermediate-pro
 
 -- intermediate-product-electronic
 util.regroup.set_subgroup_to_prototype("nickel-electromagnet", "intermediate-product-electronic", "01")
-util.regroup.set_subgroup_to_prototype("se-holmium-solenoid", "intermediate-product-electronic", "02")
-util.regroup.set_subgroup_to_prototype("se-dynamic-emitter", "intermediate-product-electronic", "03")
-util.regroup.set_subgroup_to_prototype("fu_magnet_1_recipe", "intermediate-product-electronic", "04")
-util.regroup.set_subgroup_to_prototype("fu_materials_magnet", "intermediate-product-electronic", "04")
+util.regroup.set_subgroup_to_prototype("energy-control-unit", "intermediate-product-other-cell", "02")
+util.regroup.set_subgroup_to_prototype("se-holmium-solenoid", "intermediate-product-electronic", "03")
+util.regroup.set_subgroup_to_prototype("se-dynamic-emitter", "intermediate-product-electronic", "04")
+util.regroup.set_subgroup_to_prototype("fu_magnet_1_recipe", "intermediate-product-electronic", "05")
+util.regroup.set_subgroup_to_prototype("fu_materials_magnet", "intermediate-product-electronic", "06")
+util.regroup.set_subgroup_to_prototype("gr_plasma_cube_recipe", "intermediate-product-electronic", "07")
+util.regroup.set_subgroup_to_prototype("gr_materials_plasma_cube", "intermediate-product-electronic", "08")
+util.regroup.set_subgroup_to_prototype("gr_magnet_recipe", "intermediate-product-electronic", "09")
+util.regroup.set_subgroup_to_prototype("gr_materials_magnet", "intermediate-product-electronic", "10")
 
 -- intermediate-product-electronic-components
 util.regroup.set_subgroup_to_prototype("electronic-components", "intermediate-product-electronic-components", "01")
@@ -210,12 +224,14 @@ util.regroup.set_subgroup_to_prototype("circuit-board", "intermediate-product-el
 util.regroup.set_subgroup_to_prototype("superior-circuit-board", "intermediate-product-electronic-components", "15")
 util.regroup.set_subgroup_to_prototype("multi-layer-circuit-board", "intermediate-product-electronic-components", "16")
 util.regroup.set_subgroup_to_prototype("pcb-substrate", "intermediate-product-electronic-components", "17")
-util.regroup.set_subgroup_to_prototype("mainboard", "intermediate-product-electronic-components", "18")
-util.regroup.set_subgroup_to_prototype("mainboard-holmium", "intermediate-product-electronic-components", "19")
-util.regroup.set_subgroup_to_prototype("mlcc", "intermediate-product-electronic-components", "20")
-util.regroup.set_subgroup_to_prototype("temperature-sensor", "intermediate-product-electronic-components", "21")
-util.regroup.set_subgroup_to_prototype("cpu", "intermediate-product-electronic-components", "22")
-util.regroup.set_subgroup_to_prototype("cpu-holmium", "intermediate-product-electronic-components", "23")
+util.regroup.set_subgroup_to_prototype("gr_pcb_recipe", "intermediate-product-electronic-components", "18")
+util.regroup.set_subgroup_to_prototype("gr_materials_pcb", "intermediate-product-electronic-components", "19")
+util.regroup.set_subgroup_to_prototype("mainboard", "intermediate-product-electronic-components", "20")
+util.regroup.set_subgroup_to_prototype("mainboard-holmium", "intermediate-product-electronic-components", "21")
+util.regroup.set_subgroup_to_prototype("mlcc", "intermediate-product-electronic-components", "22")
+util.regroup.set_subgroup_to_prototype("temperature-sensor", "intermediate-product-electronic-components", "23")
+util.regroup.set_subgroup_to_prototype("cpu", "intermediate-product-electronic-components", "24")
+util.regroup.set_subgroup_to_prototype("cpu-holmium", "intermediate-product-electronic-components", "25")
 
 -- intermediate-product-processor
 util.regroup.set_subgroup_to_prototype("electronic-circuit", "intermediate-product-processor", "01")
@@ -226,6 +242,8 @@ util.regroup.set_subgroup_to_prototype("advanced-processing-unit", "intermediate
 util.regroup.set_subgroup_to_prototype("se-quantum-processor", "intermediate-product-processor", "06")
 util.regroup.set_subgroup_to_prototype("se-naquium-processor", "intermediate-product-processor", "07")
 util.regroup.set_subgroup_to_prototype("se-naquium-processor-alt", "intermediate-product-processor", "08")
+util.regroup.set_subgroup_to_prototype("gr_circuit_recipe", "intermediate-product-processor", "09")
+util.regroup.set_subgroup_to_prototype("gr_materials_circuit", "intermediate-product-processor", "10")
 
 -- intermediate-product-rocket-part
 util.regroup.set_subgroup_to_prototype("low-density-structure", "intermediate-product-rocket-part", "01")
@@ -258,8 +276,7 @@ util.regroup.set_subgroup_to_prototype("fu_space_probe_deep_probe_item", "interm
 util.regroup.set_subgroup_to_prototype("skyseeker-armature", "intermediate-product-intersurface-part", "01")
 util.regroup.set_subgroup_to_prototype("se-space-probe-rocket", "intermediate-product-intersurface-part", "02")
 util.regroup.set_subgroup_to_prototype("se-delivery-cannon-capsule", "intermediate-product-intersurface-part", "03")
-util.regroup.set_subgroup_to_prototype("se-delivery-cannon-capsule-iridium", "intermediate-product-intersurface-part",
-    "04")
+util.regroup.set_subgroup_to_prototype("se-delivery-cannon-capsule-iridium", "intermediate-product-intersurface-part", "04")
 util.regroup.set_subgroup_to_prototype("se-space-elevator-cable", "intermediate-product-intersurface-part", "05")
 util.regroup.set_subgroup_to_prototype("se-space-elevator-cable-nano", "intermediate-product-intersurface-part", "06")
 
@@ -268,13 +285,11 @@ util.regroup.set_subgroup_to_prototype("empty-barrel", "intermediate-product-can
 util.regroup.set_subgroup_to_prototype("se-canister", "intermediate-product-canister", "02")
 util.regroup.set_subgroup_to_prototype("se-empty-lifesupport-canister", "intermediate-product-canister", "03")
 util.regroup.set_subgroup_to_prototype("se-empty-lifesupport-canister-cleaning", "intermediate-product-canister", "04")
-util.regroup.set_subgroup_to_prototype("se-empty-lifesupport-canister-cleaning-space", "intermediate-product-canister",
-    "05")
+util.regroup.set_subgroup_to_prototype("se-empty-lifesupport-canister-cleaning-space", "intermediate-product-canister", "05")
 util.regroup.set_subgroup_to_prototype("se-lifesupport-canister-coal", "intermediate-product-canister", "06")
 util.regroup.set_subgroup_to_prototype("se-lifesupport-canister-fish", "intermediate-product-canister", "07")
 util.regroup.set_subgroup_to_prototype("se-lifesupport-canister-specimen", "intermediate-product-canister", "08")
 util.regroup.set_subgroup_to_prototype("se-magnetic-canister", "intermediate-product-canister", "09")
-
 
 -- intermediate-product-recycling
 util.regroup.set_subgroup_to_prototype("se-recycle-small-iron-electric-pole", "intermediate-product-recycling", "01")

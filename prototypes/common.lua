@@ -1,7 +1,28 @@
 local util = require("functions/util")
 
+-- remove star engine
+-- remove fluids
+data.raw["fluid"]["fu_protium_heated"] = nil
+data.raw["fluid"]["fu_sulfur_heated"] = nil
+data.raw["fluid"]["fu_sulfur"] = nil
+data.raw["fluid"]["fu_iron_heated"] = nil
+data.raw["fluid"]["fu_iron"] = nil
+data.raw["fluid"]["fu_copper_heated"] = nil
+data.raw["fluid"]["fu_copper"] = nil
+data.raw["fluid"]["fu_lithium_7_heated"] = nil
+data.raw["fluid"]["fu_lithium_7"] = nil
+data.raw["fluid"]["fu_uranium_235_heated"] = nil
+data.raw["fluid"]["fu_uranium_235"] = nil
+data.raw["fluid"]["fu_uranium_238_heated"] = nil
+data.raw["fluid"]["fu_uranium_238"] = nil
+data.raw["fluid"]["248k-nickel-atom-hot"] = nil
+data.raw["fluid"]["248k-nickel-atom"] = nil
+data.raw["fluid"]["248k-zinc-atom-hot"] = nil
+data.raw["fluid"]["248k-zinc-atom"] = nil
 
 -- 248k assemblings
+data.raw["recipe"]["gr_materials_fusion_cell_recipe"].category = "crafting"
+
 local fluid_boxes = {
     {
         production_type = "input",
