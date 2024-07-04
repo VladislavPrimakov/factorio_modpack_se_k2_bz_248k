@@ -1,10 +1,16 @@
 Version: 1.0.40
+Date: 04. 07. 2024
+  Changes:
+  - Removed 248k black/white holes.
+  - Improved restack and item ordering.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.40
 Date: 01. 07. 2024
   Changes:
   - Removed 248k star engine.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.39
-Date: 08. 06. 2024
+Date: 28. 06. 2024
   Changes:
   - Removed 248k modules.
   - Removed KIX2 techology.

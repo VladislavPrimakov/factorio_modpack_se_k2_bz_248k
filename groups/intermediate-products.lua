@@ -282,14 +282,6 @@ util.regroup.set_subgroup_to_prototype("se-space-elevator-cable-nano", "intermed
 
 -- intermediate-product-canister
 util.regroup.set_subgroup_to_prototype("empty-barrel", "intermediate-product-canister", "01")
-util.regroup.set_subgroup_to_prototype("se-canister", "intermediate-product-canister", "02")
-util.regroup.set_subgroup_to_prototype("se-empty-lifesupport-canister", "intermediate-product-canister", "03")
-util.regroup.set_subgroup_to_prototype("se-empty-lifesupport-canister-cleaning", "intermediate-product-canister", "04")
-util.regroup.set_subgroup_to_prototype("se-empty-lifesupport-canister-cleaning-space", "intermediate-product-canister", "05")
-util.regroup.set_subgroup_to_prototype("se-lifesupport-canister-coal", "intermediate-product-canister", "06")
-util.regroup.set_subgroup_to_prototype("se-lifesupport-canister-fish", "intermediate-product-canister", "07")
-util.regroup.set_subgroup_to_prototype("se-lifesupport-canister-specimen", "intermediate-product-canister", "08")
-util.regroup.set_subgroup_to_prototype("se-magnetic-canister", "intermediate-product-canister", "09")
 
 -- intermediate-product-recycling
 util.regroup.set_subgroup_to_prototype("se-recycle-small-iron-electric-pole", "intermediate-product-recycling", "01")

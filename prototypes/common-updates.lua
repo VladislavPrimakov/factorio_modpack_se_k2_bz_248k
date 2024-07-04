@@ -1,5 +1,12 @@
+-- remove 248k holes
+data.raw["item"]["gr_black_hole_item"] = nil
+data.raw["item"]["gr_white_hole_item"] = nil
+
+data.raw["container"]["gr_black_hole_base_entity"] = nil
+data.raw["electric-energy-interface"]["gr_black_hole_energy_entity"] = nil
+data.raw["furnace"]["gr_white_hole_entity"] = nil
+
 -- remove star engine
--- remove items
 data.raw["item"]["fu_star_engine_core_item"] = nil
 data.raw["item"]["fu_star_engine_cooler_item"] = nil
 data.raw["item"]["fu_star_engine_cooler_up_item"] = nil
@@ -23,8 +30,6 @@ for _, recipe in ipairs(data.raw["module"]["fi_modules_productivity_1_item"].lim
         end
     end
 end
-
--- remove items
 data.raw["module"]["fi_modules_productivity_1_item"] = nil
 data.raw["module"]["fi_modules_productivity_2_item"] = nil
 data.raw["module"]["fi_modules_productivity_3_item"] = nil

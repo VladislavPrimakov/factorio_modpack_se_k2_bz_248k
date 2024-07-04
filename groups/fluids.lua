@@ -13,8 +13,9 @@ util.regroup.create_subgroup("fluids-thermofluid", "fluids", "raw-10")
 util.regroup.create_subgroup("fluids-stream", "fluids", "raw-11")
 util.regroup.create_subgroup("fluids-gel", "fluids", "raw-12")
 util.regroup.create_subgroup("fluids-metals", "fluids", "raw-13")
-util.regroup.create_subgroup("fluids-248k-metals", "fluids", "raw-14")
-util.regroup.create_subgroup("fluids-beacon", "fluids", "raw-15")
+util.regroup.create_subgroup("fluids-248k-atom", "fluids", "raw-14")
+util.regroup.create_subgroup("fluids-248k-metals", "fluids", "raw-15")
+util.regroup.create_subgroup("fluids-beacon", "fluids", "raw-16")
 
 -- fluids-water
 util.regroup.set_subgroup_to_prototype("water", "fluids-water", "01", "fluid")
@@ -63,11 +64,16 @@ util.regroup.set_subgroup_to_prototype("napalm-fluid-rampant-arsenal", "fluids-s
 util.regroup.set_subgroup_to_prototype("gas", "fluids-other", "01", "fluid")
 util.regroup.set_subgroup_to_prototype("se-methane-gas", "fluids-other", "02", "fluid")
 util.regroup.set_subgroup_to_prototype("oxygen", "fluids-other", "03", "fluid")
-util.regroup.set_subgroup_to_prototype("formaldehyde", "fluids-other", "04", "fluid")
-util.regroup.set_subgroup_to_prototype("biomethanol", "fluids-other", "05", "fluid")
-util.regroup.set_subgroup_to_prototype("hydrogen", "fluids-other", "06", "fluid")
-util.regroup.set_subgroup_to_prototype("bi-biomass", "fluids-other", "07", "fluid")
-util.regroup.set_subgroup_to_prototype("se-liquid-rocket-fuel", "fluids-other", "08", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_oxygen", "fluids-other", "04", "fluid")
+util.regroup.set_subgroup_to_prototype("formaldehyde", "fluids-other", "05", "fluid")
+util.regroup.set_subgroup_to_prototype("biomethanol", "fluids-other", "06", "fluid")
+util.regroup.set_subgroup_to_prototype("hydrogen", "fluids-other", "07", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_hydrogen", "fluids-other", "08", "fluid")
+util.regroup.set_subgroup_to_prototype("se-kr-liquid-air", "fluids-other", "09", "fluid")
+util.regroup.set_subgroup_to_prototype("se-kr--purified-air", "fluids-other", "10", "fluid")
+util.regroup.set_subgroup_to_prototype("bi-biomass", "fluids-other", "11", "fluid")
+util.regroup.set_subgroup_to_prototype("se-liquid-rocket-fuel", "fluids-other", "12", "fluid")
+
 
 -- fluids-space
 util.regroup.set_subgroup_to_prototype("se-space-water", "fluids-space", "01", "fluid")
@@ -129,6 +135,17 @@ util.regroup.set_subgroup_to_prototype("fu_metal_foam", "fluids-248k-metals", "0
 util.regroup.set_subgroup_to_prototype("fu_lead_fluid_cold", "fluids-248k-metals", "09", "fluid")
 util.regroup.set_subgroup_to_prototype("fu_lead_fluid_hot", "fluids-248k-metals", "10", "fluid")
 util.regroup.set_subgroup_to_prototype("fu_hot_steam", "fluids-248k-metals", "11", "fluid")
+
+-- fluids-248k-atom
+util.regroup.set_subgroup_to_prototype("fu_neutron_fluid", "fluids-248k-atom", "01", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_protium", "fluids-248k-atom", "02", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_deuterium", "fluids-248k-atom", "03", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_tritium", "fluids-248k-atom", "04", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_helium_3", "fluids-248k-atom", "05", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_helium_4", "fluids-248k-atom", "06", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_lithium_6", "fluids-248k-atom", "07", "fluid")
+util.regroup.set_subgroup_to_prototype("fu_protium", "fluids-248k-atom", "08", "fluid")
+
 
 -- fluids-beacon
 util.regroup.set_subgroup_to_prototype("el_ki_cpu_fluid", "fluids-beacon", "01", "fluid")

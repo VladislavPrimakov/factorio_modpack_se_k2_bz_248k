@@ -1,5 +1,21 @@
 local util = require("functions/util")
 
+-- remove 248k holes
+data.raw["technology"]["gr_black_hole_tech"].hidden = true
+data.raw["technology"]["gr_black_hole_tech"].visible_when_disabled = false
+data.raw["technology"]["gr_black_hole_tech"].effects = nil
+data.raw["technology"]["gr_white_hole_tech"].hidden = true
+data.raw["technology"]["gr_white_hole_tech"].visible_when_disabled = false
+data.raw["technology"]["gr_white_hole_tech"].effects = nil
+krastorio.technologies.removePrerequisite("gr_data_tech", "gr_black_hole_tech")
+krastorio.technologies.removePrerequisite("gr_data_tech", "gr_white_hole_tech")
+krastorio.technologies.addPrerequisite("gr_data_tech", "gr_charger_tech")
+
+data.raw["recipe"]["gr_black_hole_recipe"] = nil
+data.raw["recipe"]["fu_burn_gr_black_hole_item_recipe"] = nil
+data.raw["recipe"]["gr_white_hole_recipe"] = nil
+data.raw["recipe"]["fu_burn_gr_white_hole_item_recipe"] = nil
+
 -- remove 248k modules
 data.raw["technology"]["fi_modules_1_tech"] = nil
 data.raw["technology"]["fi_modules_2_tech"] = nil
@@ -18,14 +34,12 @@ data.raw["recipe"]["fi_modules_productivity_6_recipe"] = nil
 data.raw["technology"]["fu_ki_plus_2_tech"].hidden = true
 
 -- remove star engine
--- remove entities
 data.raw["assembling-machine"]["fu_star_engine_core_entity"] = nil
 data.raw["assembling-machine"]["fu_star_engine_cooler_entity"] = nil
 data.raw["assembling-machine"]["fu_star_engine_cooler_up_entity"] = nil
 data.raw["assembling-machine"]["fu_star_engine_heater_entity"] = nil
 data.raw["assembling-machine"]["fu_star_engine_heater_left_entity"] = nil
 
--- remove recipes
 data.raw["recipe"]["fu_star_engine_core_recipe"] = nil
 data.raw["recipe"]["fu_star_engine_cooler_recipe"] = nil
 data.raw["recipe"]["fu_star_engine_cooler_up_recipe"] = nil
@@ -77,7 +91,6 @@ data.raw["recipe"]["248k-zinc-atom"] = nil
 data.raw["recipe"]["zinc-from-atoms"] = nil
 data.raw["recipe"]["brass-from-atoms"] = nil
 
--- remove technologies
 data.raw["technology"]["fu_star_engine_tech"] = nil
 data.raw["technology"]["fu_star_engine_iron_tech"] = nil
 data.raw["technology"]["fu_star_engine_copper_tech"] = nil
@@ -260,24 +273,17 @@ data.raw.recipe["se-scrap-recycling"].results = {
 table.insert(data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_categories, "kiln")
 
 -- technologies
-
 -- mk3-battery-rampant-arsenal
 krastorio.technologies.removePrerequisite("rampant-arsenal-technology-battery-equipment-3", "battery-mk2-equipment")
 krastorio.technologies.removePrerequisite("rampant-arsenal-technology-battery-equipment-3", "effectivity-module-3")
 krastorio.technologies.addPrerequisite("rampant-arsenal-technology-battery-equipment-3", "kr-battery-mk3-equipment")
 krastorio.technologies.addPrerequisite("rampant-arsenal-technology-battery-equipment-3", "se-deep-space-science-pack-1")
-krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
-    "military-science-pack")
-krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
-    "se-energy-science-pack-1")
-krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
-    "se-material-science-pack-2")
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
-    "se-energy-science-pack-4", 1)
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
-    "se-material-science-pack-4", 1)
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3",
-    "se-deep-space-science-pack-1", 1)
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3", "military-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3", "se-energy-science-pack-1")
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3", "se-material-science-pack-2")
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3", "se-energy-science-pack-4", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3", "se-material-science-pack-4", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-battery-equipment-3", "se-deep-space-science-pack-1", 1)
 krastorio.technologies.setResearchUnitCount("rampant-arsenal-technology-battery-equipment-3", 1000)
 data.raw["technology"]["rampant-arsenal-technology-battery-equipment-3"].unit.time = 90
 
@@ -285,25 +291,18 @@ data.raw["technology"]["rampant-arsenal-technology-battery-equipment-3"].unit.ti
 krastorio.technologies.removePrerequisite("rampant-arsenal-technology-generator-equipment-2", "fusion-reactor-equipment")
 krastorio.technologies.addPrerequisite("rampant-arsenal-technology-generator-equipment-2", "se-rtg-equipment-2")
 krastorio.technologies.addPrerequisite("rampant-arsenal-technology-generator-equipment-2", "se-energy-science-pack-3")
-krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-2",
-    "military-science-pack")
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-2",
-    "se-energy-science-pack-3", 1)
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-2", "military-science-pack")
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-2", "se-energy-science-pack-3", 1)
 krastorio.technologies.setResearchUnitCount("rampant-arsenal-technology-generator-equipment-2", 400)
 data.raw["technology"]["rampant-arsenal-technology-generator-equipment-2"].unit.time = 90
 
 -- nuclear-generator-rampant-arsenal
-krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
-    "military-science-pack")
+krastorio.technologies.removeResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3", "military-science-pack")
 krastorio.technologies.addPrerequisite("rampant-arsenal-technology-generator-equipment-3", "se-deep-space-science-pack-4")
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
-    "se-material-science-pack-4", 1)
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
-    "se-kr-matter-science-pack-2", 1)
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
-    "singularity-tech-card", 1)
-krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3",
-    "se-deep-space-science-pack-4", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3", "se-material-science-pack-4", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3", "se-kr-matter-science-pack-2", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3", "singularity-tech-card", 1)
+krastorio.technologies.addResearchUnitIngredient("rampant-arsenal-technology-generator-equipment-3", "se-deep-space-science-pack-4", 1)
 krastorio.technologies.setResearchUnitCount("rampant-arsenal-technology-generator-equipment-3", 600)
 data.raw["technology"]["rampant-arsenal-technology-generator-equipment-3"].unit.time = 120
 
@@ -312,14 +311,10 @@ krastorio.technologies.removeEffect("optics", { type = "unlock-recipe", recipe =
 krastorio.technologies.removeEffect("optics", { type = "unlock-recipe", recipe = "lighted-bi-large-substation" })
 krastorio.technologies.removeEffect("optics", { type = "unlock-recipe", recipe = "lighted-bi-wooden-pole-big" })
 krastorio.technologies.removeEffect("optics", { type = "unlock-recipe", recipe = "lighted-bi-wooden-pole-huge" })
-krastorio.technologies.addEffect("electric-energy-distribution-3",
-    { type = "unlock-recipe", recipe = "lighted-kr-substation-mk2" })
-krastorio.technologies.addEffect("electric-energy-distribution-2",
-    { type = "unlock-recipe", recipe = "lighted-bi-large-substation" })
-krastorio.technologies.addEffect("electric-energy-distribution-2",
-    { type = "unlock-recipe", recipe = "lighted-bi-large-huge" })
-krastorio.technologies.addEffect("logistics",
-    { type = "unlock-recipe", recipe = "lighted-bi-large-big" })
+krastorio.technologies.addEffect("electric-energy-distribution-3", { type = "unlock-recipe", recipe = "lighted-kr-substation-mk2" })
+krastorio.technologies.addEffect("electric-energy-distribution-2", { type = "unlock-recipe", recipe = "lighted-bi-large-substation" })
+krastorio.technologies.addEffect("electric-energy-distribution-2", { type = "unlock-recipe", recipe = "lighted-bi-large-huge" })
+krastorio.technologies.addEffect("logistics", { type = "unlock-recipe", recipe = "lighted-bi-large-big" })
 
 -- 1 tech ki
 krastorio.technologies.removePrerequisite("el_ki_sup_1_tech", "fi_ki_eff_1_tech")
@@ -486,8 +481,7 @@ data.raw["generator-equipment"]["nuclear-reactor-equipment"].burner.fuel_categor
     "fi_basic_fuel",
     "fi_pure_fuel",
 }
-local arr_categories_for_armor = { "eq-solar", "eq-battery", "eq-defense", "eq-generator", "eq-energy-shield",
-    "eq-adaptive-shield", "eq-character" }
+local arr_categories_for_armor = { "eq-solar", "eq-battery", "eq-defense", "eq-generator", "eq-energy-shield", "eq-adaptive-shield", "eq-character" }
 
 -- modular armor
 util.equipment.clear_categories_from_grid("small-equipment-grid")
@@ -515,8 +509,7 @@ util.equipment.clear_categories_from_grid("se-thruster-suit-4-grid")
 util.equipment.add_categories_to_grid("se-thruster-suit-4-grid", arr_categories_for_armor)
 
 
-local arr_categories_for_transport = { "eq-solar", "eq-energy-shield", "eq-battery", "eq-defense",
-    "eq-generator" }
+local arr_categories_for_transport = { "eq-solar", "eq-energy-shield", "eq-battery", "eq-defense", "eq-generator" }
 -- locomotives grid
 data.raw["movement-bonus-equipment"]["el_train_equipment_accelerator_item"].movement_bonus = 0.25
 

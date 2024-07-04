@@ -29,14 +29,12 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                     end
                     if item.subgroup == "production-solar-panels" or item.subgroup == "production-accumulators" then
                         if settings.startup["Modpack-ReStack-solar-panel-accumulator"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-solar-panel-accumulator"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-solar-panel-accumulator"].value)
                         end
                     end
                     if item.subgroup == "production-mining-drills" or item.subgroup == "production-extraction-machine" or item.subgroup == "production-stone-crusher" then
                         if settings.startup["Modpack-ReStack-extraction-machines"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-extraction-machines"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-extraction-machines"].value)
                         end
                     end
                     if item.subgroup == "production-offshore-pumps" or item.subgroup == "production-water-pumpjacks" then
@@ -62,8 +60,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         or item.subgroup == "production-lab"
                     then
                         if settings.startup["Modpack-ReStack-production-machines"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-production-machines"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-production-machines"].value)
                         end
                     end
                 end
@@ -72,26 +69,22 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                     if item.subgroup == "transport-locomotives" or item.subgroup == "transport-wagons" or item.subgroup == "transport-fluid-wagons"
                         or item.subgroup == "transport-artillery-wagons" then
                         if settings.startup["Modpack-ReStack-locomotives-wagons"].value then
-                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-locomotives-wagons"]
-                                .value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-locomotives-wagons"].value)
                         end
                     end
                     if item.subgroup == "transport-rails" or item.subgroup == "transport-railway-logic" then
                         if settings.startup["Modpack-ReStack-rails-railway-logic"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-rails-railway-logic"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-rails-railway-logic"].value)
                         end
                     end
                     if item.subgroup == "transport-drones" and item.name ~= "transport-drone" then
                         if settings.startup["Modpack-ReStack-transport-drones"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-transport-drones"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-transport-drones"].value)
                         end
                     end
                     if item.subgroup == "transport-machines" then
                         if settings.startup["Modpack-ReStack-transport-machines"].value then
-                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-transport-machines"]
-                                .value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-transport-machines"].value)
                         end
                     end
                 end
@@ -122,16 +115,14 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         or item.subgroup == "logistic-splitter"
                         or item.subgroup == "logistic-inserter" then
                         if settings.startup["Modpack-ReStack-belts-inserters"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-belts-inserters"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-belts-inserters"].value)
                         end
                     end
                     if item.subgroup == "logistic-pole-middle"
                         or item.subgroup == "logistic-pole-big"
                         or item.subgroup == "logistic-pole-substation" then
                         if settings.startup["Modpack-ReStack-electic-poles"].value then
-                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-electic-poles"]
-                                .value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-electic-poles"].value)
                         end
                     end
                     if item.subgroup == "logistic-drones" then
@@ -146,20 +137,17 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                     end
                     if item.subgroup == "logistic-circuit-network" then
                         if settings.startup["Modpack-ReStack-circuit-network"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-circuit-network"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-circuit-network"].value)
                         end
                     end
                     if item.subgroup == "logistic-rocket" then
                         if settings.startup["Modpack-ReStack-rocket-logistics"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-rocket-logistics"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-rocket-logistics"].value)
                         end
                     end
                     if item.subgroup == "logistic-spaceship-structure" then
                         if settings.startup["Modpack-ReStack-spaceship-structure"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-spaceship-structure"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-spaceship-structure"].value)
                         end
                     end
                 end
@@ -168,7 +156,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                     if item.subgroup == "module-speed"
                         or item.subgroup == "module-productivity"
                         or item.subgroup == "module-effectivity"
-                        or item.subgroup == "module-248k" then
+                    then
                         if settings.startup["Modpack-ReStack-modules"].value then
                             util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-modules"].value)
                         end
@@ -178,27 +166,27 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         or item.subgroup == "module-ki-2"
                         or item.subgroup == "module-ki-3" then
                         if settings.startup["Modpack-ReStack-beacons-248k-circuit"].value then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-beacons-248k-circuit"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-beacons-248k-circuit"].value)
                         end
                     end
                 end
-                -- resources and petrochemestry
-                if (data.raw["item-subgroup"][item.subgroup].group == "resources" or data.raw["item-subgroup"][item.subgroup].group == "petrochemistry") then
-                    local isItemBannedSe = krastorio_utils.tables.find(banned_se_subgroups,
-                        function(i) return i == item.subgroup end)
+                -- resources and petrochemestry and bio
+                if data.raw["item-subgroup"][item.subgroup].group == "resources"
+                    or data.raw["item-subgroup"][item.subgroup].group == "petrochemistry"
+                    or data.raw["item-subgroup"][item.subgroup].group == "bio-industries"
+                then
+                    local isItemBannedSe = krastorio_utils.tables.find(banned_se_subgroups, function(i) return i == item.subgroup end)
                     if item.subgroup ~= "petrochemistry-fuel"
                         and item.subgroup ~= "petrochemistry-rocket-fuel"
-                        and isItemBannedSe == nil then
+                        and isItemBannedSe == nil
+                    then
                         local startPosCoreFragment = string.find(item.name, "core%-fragment")
                         local startPosIngot = string.find(item.name, "ingot")
                         local startPosOre = string.find(item.name, "ore")
-                        local isItemOres = krastorio_utils.tables.find(items_ore,
-                            function(i) return i == item.name end)
+                        local isItemOres = krastorio_utils.tables.find(items_ore, function(i) return i == item.name end)
                         if settings.startup["Modpack-ReStack-resources"].value then
                             if startPosCoreFragment == nil and startPosOre == nil and isItemOres == nil and startPosIngot == nil then
-                                util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-resources"]
-                                    .value)
+                                util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-resources"].value)
                             end
                         end
                         if settings.startup["Modpack-ReStack-ores"].value then
@@ -228,14 +216,12 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                             or item.subgroup == "intermediate-product-electronic"
                             or item.subgroup == "intermediate-product-electronic-components"
                         then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-intermediate-products"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-intermediate-products"].value)
                         end
                     end
                     if settings.startup["Modpack-ReStack-engine-components-gearbox"].value then
                         if item.subgroup == "intermediate-product-engine-components" or item.subgroup == "intermediate-product-gearbox" then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-engine-components-gearbox"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-engine-components-gearbox"].value)
                         end
                     end
                     if settings.startup["Modpack-ReStack-processor"].value then
@@ -253,8 +239,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                 if data.raw["item-subgroup"][item.subgroup].group == "combat" then
                     if settings.startup["Modpack-ReStack-combat-utility"].value then
                         if item.subgroup == "combat-tool" or item.subgroup == "combat-defensive-structure" then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-combat-utility"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-combat-utility"].value)
                         end
                     end
                     if settings.startup["Modpack-ReStack-turret"].value then
@@ -269,16 +254,16 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         end
                     end
                     if settings.startup["Modpack-ReStack-magazine"].value then
-                        if (item.subgroup == "combat-dart"
-                                or item.subgroup == "combat-firearm"
-                                or item.subgroup == "combat-shotgun"
-                                or item.subgroup == "combat-large-rifle"
-                                or item.subgroup == "combat-rifle"
-                                or item.subgroup == "combat-flamethrower"
-                                or item.subgroup == "combat-se-gun"
-                                or item.subgroup == "combat-capsule"
-                                or item.subgroup == "combat-cannon"
-                                or item.subgroup == "combat-railgun")
+                        if item.subgroup == "combat-dart"
+                            or item.subgroup == "combat-firearm"
+                            or item.subgroup == "combat-shotgun"
+                            or item.subgroup == "combat-large-rifle"
+                            or item.subgroup == "combat-rifle"
+                            or item.subgroup == "combat-flamethrower"
+                            or item.subgroup == "combat-se-gun"
+                            or item.subgroup == "combat-capsule"
+                            or item.subgroup == "combat-cannon"
+                            or item.subgroup == "combat-railgun"
                             and
                             item.type == "ammo"
                         then
@@ -297,8 +282,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                     end
                     if settings.startup["Modpack-ReStack-artillery-shell"].value then
                         if item.subgroup == "combat-artillery" and item.type == "ammo" then
-                            util.restack.restack(type, item.name,
-                                settings.startup["Modpack-ReStack-artillery-shell"].value)
+                            util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-artillery-shell"].value)
                         end
                     end
                 end
@@ -322,9 +306,7 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
     end
     if settings.startup["Modpack-ReStack-diesel-fuel"].value then
         util.restack.restack(type, "el_train_fuel_diesel_item", settings.startup["Modpack-ReStack-diesel-fuel"].value)
-        util.restack.restack(type, "el_train_fuel_diesel_energiized_item", settings.startup
-            ["Modpack-ReStack-diesel-fuel"]
-            .value)
+        util.restack.restack(type, "el_train_fuel_diesel_energiized_item", settings.startup["Modpack-ReStack-diesel-fuel"].value)
         util.restack.restack(type, "fi_fuel_train_crystal_item", settings.startup["Modpack-ReStack-diesel-fuel"].value)
     end
     if settings.startup["Modpack-ReStack-barrels"].value then
