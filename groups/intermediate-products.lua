@@ -17,10 +17,9 @@ util.regroup.create_subgroup("intermediate-product-electronic", "intermediate-pr
 util.regroup.create_subgroup("intermediate-product-electronic-components", "intermediate-products", "raw-15")
 util.regroup.create_subgroup("intermediate-product-processor", "intermediate-products", "raw-16")
 util.regroup.create_subgroup("intermediate-product-rocket-part", "intermediate-products", "raw-17")
-util.regroup.create_subgroup("intermediate-product-satellite", "intermediate-products", "raw-18")
-util.regroup.create_subgroup("intermediate-product-intersurface-part", "intermediate-products", "raw-19")
-util.regroup.create_subgroup("intermediate-product-canister", "intermediate-products", "raw-20")
-util.regroup.create_subgroup("intermediate-product-recycling", "intermediate-products", "raw-21")
+util.regroup.create_subgroup("intermediate-product-intersurface-part", "intermediate-products", "raw-18")
+util.regroup.create_subgroup("intermediate-product-canister", "intermediate-products", "raw-19")
+util.regroup.create_subgroup("intermediate-product-recycling", "intermediate-products", "raw-20")
 
 -- intermediate-product-magazine
 util.regroup.set_subgroup_to_prototype("empty-shotgun-recipe", "intermediate-product-magazine", "01")
@@ -261,16 +260,6 @@ util.regroup.set_subgroup_to_prototype("se-cargo-rocket-section-beryllium", "int
 util.regroup.set_subgroup_to_prototype("se-cargo-rocket-section-unpack", "intermediate-product-rocket-part", "13")
 util.regroup.set_subgroup_to_prototype("se-cargo-rocket-section-pack", "intermediate-product-rocket-part", "14")
 util.regroup.set_subgroup_to_prototype("se-cargo-rocket-section-packed", "intermediate-product-rocket-part", "15")
-
--- intermediate-product-satellite
-util.regroup.set_subgroup_to_prototype("satellite", "intermediate-product-satellite", "01")
-util.regroup.set_subgroup_to_prototype("gps-satellite", "intermediate-product-satellite", "02")
-util.regroup.set_subgroup_to_prototype("fu_space_probe_sputnik_recipe", "intermediate-product-satellite", "03")
-util.regroup.set_subgroup_to_prototype("fu_space_probe_sputnik_item", "intermediate-product-satellite", "04")
-util.regroup.set_subgroup_to_prototype("fu_space_probe_probe_recipe", "intermediate-product-satellite", "05")
-util.regroup.set_subgroup_to_prototype("fu_space_probe_probe_item", "intermediate-product-satellite", "06")
-util.regroup.set_subgroup_to_prototype("fu_space_probe_deep_probe_recipe", "intermediate-product-satellite", "07")
-util.regroup.set_subgroup_to_prototype("fu_space_probe_deep_probe_item", "intermediate-product-satellite", "08")
 
 -- intermediate-product-intersurface-part
 util.regroup.set_subgroup_to_prototype("skyseeker-armature", "intermediate-product-intersurface-part", "01")

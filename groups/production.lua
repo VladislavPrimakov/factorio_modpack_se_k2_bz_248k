@@ -41,8 +41,8 @@ util.regroup.set_subgroup_to_prototype("steam-turbine", "production-energy", "10
 util.regroup.set_subgroup_to_prototype("se-condenser-turbine", "production-energy", "11")
 util.regroup.set_subgroup_to_prototype("kr-advanced-steam-turbine", "production-energy", "12")
 util.regroup.set_subgroup_to_prototype("se-kr-advanced-condenser-turbine", "production-energy", "13")
-util.regroup.set_subgroup_to_prototype("se-big-turbine", "production-energy", "13")
-util.regroup.set_subgroup_to_prototype("se-fluid-burner-generator", "production-energy", "14")
+util.regroup.set_subgroup_to_prototype("se-big-turbine", "production-energy", "14")
+util.regroup.set_subgroup_to_prototype("se-fluid-burner-generator", "production-energy", "15")
 
 -- production-energy-nuclear
 util.regroup.set_subgroup_to_prototype("nuclear-reactor", "production-energy-nuclear", "01")
@@ -281,6 +281,7 @@ util.regroup.set_subgroup_to_prototype("se-energy-transmitter-emitter", "product
 util.regroup.set_subgroup_to_prototype("se-energy-transmitter-chamber", "production-beaming", "02")
 util.regroup.set_subgroup_to_prototype("se-energy-transmitter-injector", "production-beaming", "03")
 util.regroup.set_subgroup_to_prototype("se-energy-receiver", "production-beaming", "04")
+util.regroup.set_subgroup_to_prototype("se-dimensional-anchor", "production-beaming", "05")
 
 -- production-lab
 util.regroup.set_subgroup_to_prototype("burner-lab", "production-lab", "01")

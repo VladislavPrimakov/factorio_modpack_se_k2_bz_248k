@@ -1,4 +1,12 @@
-Version: 1.0.40
+Version: 1.0.42
+Date: 19. 07. 2024
+  Changes:
+  - Balanced core fragment processing recipe.
+  - Fixed errors with removing entities.
+  - Removed pollution module because it useless.
+  - Removed rocket tech card from 248k elements
+---------------------------------------------------------------------------------------------------
+Version: 1.0.41
 Date: 04. 07. 2024
   Changes:
   - Removed 248k black/white holes.

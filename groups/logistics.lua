@@ -10,14 +10,14 @@ util.regroup.create_subgroup("logistic-transport-belt", "logistics", "raw-07")
 util.regroup.create_subgroup("logistic-underground-belt", "logistics", "raw-08")
 util.regroup.create_subgroup("logistic-splitter", "logistics", "raw-09")
 util.regroup.create_subgroup("logistic-inserter", "logistics", "raw-10")
-util.regroup.create_subgroup("logistic-pole-middle", "logistics", "raw-11")
-util.regroup.create_subgroup("logistic-pole-big", "logistics", "raw-12")
-util.regroup.create_subgroup("logistic-pole-substation", "logistics", "raw-13")
-util.regroup.create_subgroup("logistic-drones", "logistics", "raw-14")
-util.regroup.create_subgroup("logistic-network", "logistics", "raw-15")
-util.regroup.create_subgroup("logistic-circuit-network", "logistics", "raw-16")
-util.regroup.create_subgroup("logistic-rocket", "logistics", "raw-17")
-util.regroup.create_subgroup("logistic-spaceship-structure", "logistics", "raw-18")
+util.regroup.create_subgroup("logistic-cranes", "logistics", "raw-11")
+util.regroup.create_subgroup("logistic-pole-middle", "logistics", "raw-12")
+util.regroup.create_subgroup("logistic-pole-big", "logistics", "raw-13")
+util.regroup.create_subgroup("logistic-pole-substation", "logistics", "raw-14")
+util.regroup.create_subgroup("logistic-drones", "logistics", "raw-15")
+util.regroup.create_subgroup("logistic-network", "logistics", "raw-16")
+util.regroup.create_subgroup("logistic-circuit-network", "logistics", "raw-17")
+util.regroup.create_subgroup("logistic-rocket", "logistics", "raw-18")
 
 -- logistic-container-1
 util.regroup.set_subgroup_to_prototype("steel-chest", "logistic-container-1", "01")
@@ -58,7 +58,6 @@ util.regroup.set_subgroup_to_prototype("kr-shelter", "logistic-storage", "01")
 util.regroup.set_subgroup_to_prototype("memory-unit-se2", "logistic-storage", "02")
 util.regroup.set_subgroup_to_prototype("fluid-memory-unit", "logistic-storage", "03")
 util.regroup.set_subgroup_to_prototype("se-linked-container", "logistic-storage", "04")
-
 
 -- logistic-belt
 util.regroup.set_subgroup_to_prototype("kr-loader", "logistic-belt", "01")
@@ -132,6 +131,16 @@ util.regroup.set_subgroup_to_prototype("kr-superior-inserter", "logistic-inserte
 util.regroup.set_subgroup_to_prototype("kr-superior-long-inserter", "logistic-inserter", "09")
 util.regroup.set_subgroup_to_prototype("kr-superior-filter-inserter", "logistic-inserter", "10")
 util.regroup.set_subgroup_to_prototype("kr-superior-long-filter-inserter", "logistic-inserter", "11")
+
+-- logistic-cranes
+util.regroup.set_subgroup_to_prototype("nco-crane", "logistic-cranes", "01")
+util.regroup.set_subgroup_to_prototype("nco-wide-crane", "logistic-cranes", "02")
+util.regroup.set_subgroup_to_prototype("nco-filter-crane", "logistic-cranes", "03")
+util.regroup.set_subgroup_to_prototype("nco-wide-filter-crane", "logistic-cranes", "04")
+util.regroup.set_subgroup_to_prototype("nco-superior-crane", "logistic-cranes", "05")
+util.regroup.set_subgroup_to_prototype("nco-superior-wide-crane", "logistic-cranes", "06")
+util.regroup.set_subgroup_to_prototype("nco-superior-filter-crane", "logistic-cranes", "07")
+util.regroup.set_subgroup_to_prototype("nco-superior-wide-filter-crane", "logistic-cranes", "08")
 
 -- logistic-pole-middle
 util.regroup.set_subgroup_to_prototype("small-electric-pole", "logistic-pole-middle", "01")
@@ -213,16 +222,3 @@ util.regroup.set_subgroup_to_prototype("se-space-capsule-refurbish", "logistic-r
 util.regroup.set_subgroup_to_prototype("se-delivery-cannon", "logistic-rocket", "06")
 util.regroup.set_subgroup_to_prototype("se-delivery-cannon-chest", "logistic-rocket", "07")
 util.regroup.set_subgroup_to_prototype("se-space-elevator", "logistic-rocket", "08")
-
--- logistic-spaceship-structure
-util.regroup.set_subgroup_to_prototype("se-spaceship-console", "logistic-spaceship-structure", "01")
-util.regroup.set_subgroup_to_prototype("se-spaceship-floor", "logistic-spaceship-structure", "02")
-util.regroup.set_subgroup_to_prototype("se-spaceship-wall", "logistic-spaceship-structure", "03")
-util.regroup.set_subgroup_to_prototype("se-spaceship-gate", "logistic-spaceship-structure", "04")
-util.regroup.set_subgroup_to_prototype("se-spaceship-clamp", "logistic-spaceship-structure", "05")
-util.regroup.set_subgroup_to_prototype("se-spaceship-rocket-engine", "logistic-spaceship-structure", "06")
-util.regroup.set_subgroup_to_prototype("se-spaceship-rocket-booster-tank", "logistic-spaceship-structure", "07")
-util.regroup.set_subgroup_to_prototype("se-spaceship-ion-engine", "logistic-spaceship-structure", "08")
-util.regroup.set_subgroup_to_prototype("se-spaceship-ion-booster-tank", "logistic-spaceship-structure", "09")
-util.regroup.set_subgroup_to_prototype("se-spaceship-antimatter-engine", "logistic-spaceship-structure", "10")
-util.regroup.set_subgroup_to_prototype("se-spaceship-antimatter-booster-tank", "logistic-spaceship-structure", "11")
