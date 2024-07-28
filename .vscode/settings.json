@@ -10,7 +10,11 @@
         "c:\\Program Files (x86)\\Steam\\steamapps\\common\\Factorio\\data"
     ],
     "Lua.workspace.userThirdParty": [
+<<<<<<< HEAD
         "c:\\Users\\prima\\AppData\\Roaming\\Code\\User\\workspaceStorage\\b9d2ad8757fa56335f47c082e029ec50\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+=======
+        "c:\\Users\\prima\\AppData\\Roaming\\Code\\User\\workspaceStorage\\3c98863baf096c943ffe812da8915889\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+>>>>>>> 87e13b8aa98aa07782e0ec1b8fe2d38aa02405bb
     ],
     "Lua.workspace.checkThirdParty": "ApplyInMemory"
 }

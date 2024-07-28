@@ -62,10 +62,11 @@ local function addEffect(technology_name, effect)
         end
     end
 end
+
 return {
     hide = hide,
     remove = remove,
     addPrerequisite = addPrerequisite,
     removeCard = removeCard,
-    addEffect = addEffect
+    addEffect = addEffect,
 }

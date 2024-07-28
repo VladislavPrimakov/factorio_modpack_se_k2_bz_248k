@@ -51,6 +51,7 @@ util.regroup.set_subgroup_to_prototype("fu_space_probe_probe_item", "space-inter
 util.regroup.set_subgroup_to_prototype("fu_space_probe_deep_probe_recipe", "space-intermediate-product-satellite", "08")
 util.regroup.set_subgroup_to_prototype("fu_space_probe_deep_probe_item", "space-intermediate-product-satellite", "09")
 
+
 -- space-intermediate-product-specialist-assembling
 util.regroup.set_subgroup_to_prototype("se-scrap", "space-intermediate-product-specialist-assembling", "01")
 util.regroup.set_subgroup_to_prototype("se-contaminated-scrap", "space-intermediate-product-specialist-assembling", "02")
