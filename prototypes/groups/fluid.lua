@@ -16,11 +16,12 @@ util.regroup.create_subgroup("fluid-valves", "fluid", "raw-03")
 util.regroup.create_subgroup("fluid-wood-pipes", "fluid", "raw-04")
 util.regroup.create_subgroup("fluid-iron-pipes", "fluid", "raw-05")
 util.regroup.create_subgroup("fluid-steel-pipes", "fluid", "raw-06")
-util.regroup.create_subgroup("fluid-space-pipes", "fluid", "raw-07")
-util.regroup.create_subgroup("fluid-big-pipes", "fluid", "raw-08")
-util.regroup.create_subgroup("barrel", "fluid", "raw-09")
-util.regroup.create_subgroup("empty-barrel", "fluid", "raw-10")
-util.regroup.create_subgroup("fill-barrel", "fluid", "raw-11")
+util.regroup.create_subgroup("fluid-brass-pipes", "fluid", "raw-07")
+util.regroup.create_subgroup("fluid-space-pipes", "fluid", "raw-08")
+util.regroup.create_subgroup("fluid-big-pipes", "fluid", "raw-09")
+util.regroup.create_subgroup("barrel", "fluid", "raw-10")
+util.regroup.create_subgroup("empty-barrel", "fluid", "raw-11")
+util.regroup.create_subgroup("fill-barrel", "fluid", "raw-12")
 
 -- fluid-storages
 util.regroup.set_subgroup_to_prototype("storage-tank", "fluid-storages", "01")
@@ -49,7 +50,7 @@ util.regroup.set_subgroup_to_prototype("pump", "fluid-iron-pipes", "06")
 -- fluid-steel-pipes
 util.regroup.set_subgroup_to_prototype("kr-steel-pipe", "fluid-steel-pipes", "01")
 util.regroup.set_subgroup_to_prototype("kr-steel-pipe-to-ground", "fluid-steel-pipes", "02")
-util.regroup.set_subgroup_to_prototype("kr-steel-pump", "fluid-steel-pipes", "03")
+util.regroup.set_subgroup_to_prototype("kr-steel-pump", "fluid-steel-pipes", "06")
 
 -- fluid-space-pipes
 util.regroup.set_subgroup_to_prototype("se-space-pipe", "fluid-space-pipes", "01")

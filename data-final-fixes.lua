@@ -1,8 +1,8 @@
 -- ordersgroup
-require("groups/_ordersgroup")
+require("prototypes/groups/_ordersgroup")
 
 -- re-stack
-require("re_stack")
+require("prototypes/re_stack")
 
 -- final fixes
 require("prototypes/rampant-arsenal-final")

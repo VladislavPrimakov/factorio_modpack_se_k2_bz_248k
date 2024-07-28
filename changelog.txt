@@ -1,4 +1,20 @@
-Version: 1.0.40
+Version: 1.0.43
+Date: 28. 07. 2024
+  Changes:
+  - Added straight, junction, eblow steel and brass pipes if install mod Flow Control.
+  - Fixed brass pipe recipe. Before it produced 1 pipe, now 5 pipes.
+  - Increased distance of undeground brass pipe from 60 to 64.
+  - Impoved item ordering.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.42
+Date: 19. 07. 2024
+  Changes:
+  - Balanced core fragment processing recipe.
+  - Fixed errors with removing entities.
+  - Removed pollution module because it useless.
+  - Removed rocket tech card from 248k elements.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.41
 Date: 04. 07. 2024
   Changes:
   - Removed 248k black/white holes.
@@ -14,7 +30,7 @@ Date: 28. 06. 2024
   Changes:
   - Removed 248k modules.
   - Removed KIX2 techology.
-  - Improved Item Ordering.
+  - Improved item ordering.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.38
 Date: 31. 05. 2024
@@ -32,13 +48,13 @@ Date: 02. 04. 2024
 Version: 1.0.36
 Date: 19. 03. 2024
   Changes:
-  - Improved regrouping.
+  - Improved item ordering.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.35
 Date: 12. 03. 2024
   Changes:
   - Changed recipe "Scrap recyrling". Now 10 scrap = 1 Material testing pack.
-  - Improved regrouping.
+  - Improved item ordering.
   - Rebalanced armor equipment. Added nuclear pods from 248k to nuclear generator.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.34

@@ -113,7 +113,8 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         or item.subgroup == "logistic-transport-belt"
                         or item.subgroup == "logistic-underground-belt"
                         or item.subgroup == "logistic-splitter"
-                        or item.subgroup == "logistic-inserter" then
+                        or item.subgroup == "logistic-inserter"
+                        or item.subgroup == "logistic-cranes" then
                         if settings.startup["Modpack-ReStack-belts-inserters"].value then
                             util.restack.restack(type, item.name, settings.startup["Modpack-ReStack-belts-inserters"].value)
                         end

@@ -1,3 +1,5 @@
+local util = require("functions/util")
+
 local function bob_pipepictures(pipe_type)
     return {
         straight_vertical_single = {
@@ -238,8 +240,7 @@ local function bob_pipepictures(pipe_type)
             },
         },
         horizontal_window_background = {
-            filename = "__modpack_se_k2_bz_248k__/graphics/pipe-" ..
-                pipe_type .. "/pipe-horizontal-window-background.png",
+            filename = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/pipe-horizontal-window-background.png",
             priority = "extra-high",
             width = 64,
             height = 64,
@@ -258,8 +259,7 @@ local function bob_pipepictures(pipe_type)
             width = 64,
             height = 64,
             hr_version = {
-                filename = "__modpack_se_k2_bz_248k__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-vertical-window-background.png",
+                filename = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/hr-pipe-vertical-window-background.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
@@ -510,171 +510,412 @@ local function bob_pipecoverspictures(pipe_type)
     }
 end
 
+local function createPipe(pipe_type, capacity, subgroup, ingredients)
+    local pipe = table.deepcopy(data.raw["pipe"]["pipe"])
+    pipe.name = pipe_type .. "-pipe"
+    pipe.icon = "__modpack_se_k2_bz_248k__/graphics/icons/" .. pipe_type .. "-pipe.png"
+    pipe.icon_size = 32
+    pipe.minable = { mining_time = 0.1, result = pipe_type .. "-pipe" }
+    pipe.collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } }
+    pipe.selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } }
+    pipe.fluid_box = {
+        height = capacity / 100,
+        base_area = 1,
+        pipe_connections = {
+            { position = { 0, -1 } },
+            { position = { 1, 0 } },
+            { position = { 0, 1 } },
+            { position = { -1, 0 } },
+        },
+    }
+    pipe.pictures = bob_pipepictures(pipe_type)
+    pipe.horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } }
+    pipe.vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } }
+    data:extend({
+        pipe,
+        {
+            type = "item",
+            name = pipe_type .. "-pipe",
+            icon = "__modpack_se_k2_bz_248k__/graphics/icons/" .. pipe_type .. "-pipe.png",
+            icon_size = 32,
+            subgroup = subgroup,
+            order = "01",
+            place_result = pipe_type .. "-pipe",
+            stack_size = 200,
+        },
+        {
+            type = "recipe",
+            name = pipe_type .. "-pipe",
+            subgroup = subgroup,
+            order = "01",
+            enabled = false,
+            ingredients = ingredients,
+            result_count = 5,
+            result = pipe_type .. "-pipe",
+        },
+    })
+end
+
+local function createPipeToGround(pipe_type, capacity, distance, subgroup, ingredients)
+    local pipe_to_ground = table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
+    pipe_to_ground.name = pipe_type .. "-pipe-to-ground"
+    pipe_to_ground.icon = "__modpack_se_k2_bz_248k__/graphics/icons/" .. pipe_type .. "-pipe-to-ground.png"
+    pipe_to_ground.icon_size = 32
+    pipe_to_ground.minable = { mining_time = 0.1, result = pipe_type .. "-pipe-to-ground" }
+    pipe_to_ground.collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } }
+    pipe_to_ground.selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } }
+    pipe_to_ground.fluid_box = {
+        height = capacity / 100,
+        base_area = 1,
+        pipe_covers = bob_pipecoverspictures(pipe_type),
+        pipe_connections = {
+            { position = { 0, -1 } },
+            {
+                position = { 0, 1 },
+                max_underground_distance = distance,
+            },
+        },
+    }
+    pipe_to_ground.underground_sprite = {
+        filename = "__core__/graphics/arrows/underground-lines.png",
+        priority = "extra-high-no-scale",
+        width = 64,
+        height = 64,
+        scale = 0.5,
+    }
+    pipe_to_ground.underground_remove_pipes_sprite = {
+        filename = "__core__/graphics/arrows/underground-lines-remove.png",
+        priority = "high",
+        width = 64,
+        height = 64,
+        x = 0,
+        scale = 0.5,
+    }
+    pipe_to_ground.pictures = bob_pipetogroundpictures(pipe_type)
+    data:extend({
+        pipe_to_ground,
+        {
+            type = "item",
+            name = pipe_type .. "-pipe-to-ground",
+            icon = "__modpack_se_k2_bz_248k__/graphics/icons/" .. pipe_type .. "-pipe-to-ground.png",
+            icon_size = 32,
+            subgroup = subgroup,
+            order = "02",
+            place_result = pipe_type .. "-pipe-to-ground",
+            stack_size = 200,
+        },
+        {
+            type = "recipe",
+            name = pipe_type .. "-pipe-to-ground",
+            subgroup = subgroup,
+            order = "02",
+            enabled = false,
+            ingredients = ingredients,
+            result_count = 2,
+            result = pipe_type .. "-pipe-to-ground",
+        },
+    })
+end
+
+local function createPipeStraight(pipe_type, capacity, subgroup)
+    local empty_sprite = { filename = "__core__/graphics/empty.png", size = 1, frame_count = 1 }
+    local pipe = data.raw["pipe"]["pipe"]
+    if pipe then
+        pipe_straight = table.deepcopy(data.raw["storage-tank"]["storage-tank"])
+        pipe_straight.name = pipe_type .. "-pipe-straight"
+        pipe_straight.icon = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/pipe-straight.png"
+        pipe_straight.icon_size = 64
+        pipe_straight.icon_mipmaps = nil
+        pipe_straight.minable = pipe.minable
+        pipe_straight.corpse = pipe.corpse
+        pipe_straight.max_health = pipe.max_health
+        pipe_straight.resistances = pipe.resistances
+        pipe_straight.fast_replaceable_group = pipe.fast_replaceable_group
+        if pipe_type == "steel" then
+            pipe_straight.placeable_by = { item = "kr-steel-pipe", count = 1 }
+        else
+            pipe_straight.placeable_by = { item = pipe_type .. "-pipe", count = 1 }
+        end
+        pipe_straight.collision_box = pipe.collision_box
+        pipe_straight.selection_box = { { -0.35, -0.5 }, { 0.35, 0.5 } }
+        pipe_straight.dying_explosion = pipe.dying_explosion
+        pipe_straight.friendly_map_color = { 69, 130, 165 }
+        pipe_straight.water_reflection = nil
+        pipe_straight.fluid_box =
+        {
+            height = capacity / 100,
+            base_area = 1,
+            pipe_covers = bob_pipecoverspictures(pipe_type),
+            pipe_connections =
+            {
+                { position = { 0, -1 } },
+                { position = { 0, 1 } }
+            },
+            hide_connection_info = true,
+        }
+        pipe_straight.two_direction_only = false
+        pipe_straight.pictures =
+        {
+            picture =
+            {
+                north = bob_pipepictures(pipe_type).straight_vertical,
+                east = bob_pipepictures(pipe_type).straight_horizontal,
+                south = bob_pipepictures(pipe_type).straight_vertical,
+                west = bob_pipepictures(pipe_type).straight_horizontal
+            },
+            gas_flow = empty_sprite,
+            fluid_background = empty_sprite,
+            window_background = empty_sprite,
+            flow_sprite = empty_sprite
+        }
+        pipe_straight.circuit_wire_max_distance = 0
+        pipe_straight.working_sound = nil
+        local ingredients = {}
+        if pipe_type == "steel" then
+            ingredients = { { "kr-steel-pipe", 1 } }
+        else
+            ingredients = { { pipe_type .. "-pipe", 1 } }
+        end
+        data:extend({
+            pipe_straight,
+            {
+                type = "item",
+                name = pipe_type .. "-pipe-straight",
+                icon = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/pipe-straight.png",
+                icon_size = 64,
+                subgroup = subgroup,
+                order = "03",
+                place_result = pipe_type .. "-pipe-straight",
+                stack_size = 200
+            },
+            {
+                type = "recipe",
+                name = pipe_type .. "-pipe-straight",
+                subgroup = subgroup,
+                order = "03",
+                enabled = false,
+
+                ingredients = ingredients,
+                result_count = 1,
+                result = pipe_type .. "-pipe-straight",
+            },
+        })
+    end
+end
+
+local function createPipeJunction(pipe_type, capacity, subgroup)
+    local empty_sprite = { filename = "__core__/graphics/empty.png", size = 1, frame_count = 1 }
+    local pipe = data.raw["pipe"]["pipe"]
+    if pipe then
+        pipe_junction = table.deepcopy(data.raw["storage-tank"]["storage-tank"])
+        pipe_junction.name = pipe_type .. "-pipe-junction"
+        pipe_junction.icon = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/pipe-junction.png"
+        pipe_junction.icon_size = 64
+        pipe_junction.icon_mipmaps = nil
+        pipe_junction.minable = pipe.minable
+        pipe_junction.corpse = pipe.corpse
+        pipe_junction.max_health = pipe.max_health
+        pipe_junction.resistances = pipe.resistances
+        pipe_junction.fast_replaceable_group = pipe.fast_replaceable_group
+        if pipe_type == "steel" then
+            pipe_junction.placeable_by = { item = "kr-steel-pipe", count = 1 }
+        else
+            pipe_junction.placeable_by = { item = pipe_type .. "-pipe", count = 1 }
+        end
+        pipe_junction.collision_box = pipe.collision_box
+        pipe_junction.selection_box = { { -0.5, -0.35 }, { 0.5, 0.5 } }
+        pipe_junction.dying_explosion = pipe.dying_explosion
+        pipe_junction.friendly_map_color = { 69, 130, 165 }
+        pipe_junction.water_reflection = nil
+        pipe_junction.fluid_box =
+        {
+            height = capacity / 100,
+            base_area = 1,
+            pipe_covers = bob_pipecoverspictures(pipe_type),
+            pipe_connections =
+            {
+                { position = { 1, 0 } },
+                { position = { 0, 1 } },
+                { position = { -1, 0 } }
+            },
+            hide_connection_info = true,
+        }
+        pipe_junction.two_direction_only = false
+        pipe_junction.pictures =
+        {
+            picture =
+            {
+                north = bob_pipepictures(pipe_type).t_down,
+                east = bob_pipepictures(pipe_type).t_left,
+                south = bob_pipepictures(pipe_type).t_up,
+                west = bob_pipepictures(pipe_type).t_right
+            },
+            gas_flow = empty_sprite,
+            fluid_background = empty_sprite,
+            window_background = empty_sprite,
+            flow_sprite = empty_sprite
+        }
+        pipe_junction.circuit_wire_max_distance = 0
+        pipe_junction.working_sound = nil
+        local ingredients = {}
+        if pipe_type == "steel" then
+            ingredients = { { "kr-steel-pipe", 1 } }
+        else
+            ingredients = { { pipe_type .. "-pipe", 1 } }
+        end
+        data:extend({
+            pipe_junction,
+            {
+                type = "item",
+                name = pipe_type .. "-pipe-junction",
+                icon = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/pipe-junction.png",
+                icon_size = 64,
+                subgroup = subgroup,
+                order = "04",
+                place_result = pipe_type .. "-pipe-junction",
+                stack_size = 200
+            },
+            {
+                type = "recipe",
+                name = pipe_type .. "-pipe-junction",
+                subgroup = subgroup,
+                order = "04",
+                enabled = false,
+                ingredients = ingredients,
+                result_count = 1,
+                result = pipe_type .. "-pipe-junction",
+            },
+        })
+    end
+end
+local function createPipeElbow(pipe_type, capacity, subgroup)
+    local empty_sprite = { filename = "__core__/graphics/empty.png", size = 1, frame_count = 1 }
+    local pipe = data.raw["pipe"]["pipe"]
+    if pipe then
+        pipe_elbow = table.deepcopy(data.raw["storage-tank"]["storage-tank"])
+        pipe_elbow.name = pipe_type .. "-pipe-elbow"
+        pipe_elbow.icon = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/pipe-elbow.png"
+        pipe_elbow.icon_size = 64
+        pipe_elbow.icon_mipmaps = nil
+        pipe_elbow.minable = pipe.minable
+        pipe_elbow.corpse = pipe.corpse
+        pipe_elbow.max_health = pipe.max_health
+        pipe_elbow.resistances = pipe.resistances
+        pipe_elbow.fast_replaceable_group = pipe.fast_replaceable_group
+        if pipe_type == "steel" then
+            pipe_elbow.placeable_by = { item = "kr-steel-pipe", count = 1 }
+        else
+            pipe_elbow.placeable_by = { item = pipe_type .. "-pipe", count = 1 }
+        end
+        pipe_elbow.collision_box = pipe.collision_box
+        pipe_elbow.selection_box = { { -0.35, -0.35 }, { 0.5, 0.5 } }
+        pipe_elbow.dying_explosion = pipe.dying_explosion
+        pipe_elbow.friendly_map_color = { 69, 130, 165 }
+        pipe_elbow.water_reflection = nil
+        pipe_elbow.fluid_box =
+        {
+            height = capacity / 100,
+            base_area = 1,
+            pipe_covers = bob_pipecoverspictures(pipe_type),
+            pipe_connections =
+            {
+                { position = { 1, 0 } },
+                { position = { 0, 1 } }
+            },
+            hide_connection_info = true,
+        }
+        pipe_elbow.two_direction_only = false
+        pipe_elbow.pictures =
+        {
+            picture =
+            {
+                north = bob_pipepictures(pipe_type).corner_down_right,
+                east = bob_pipepictures(pipe_type).corner_down_left,
+                south = bob_pipepictures(pipe_type).corner_up_left,
+                west = bob_pipepictures(pipe_type).corner_up_right
+            },
+            gas_flow = empty_sprite,
+            fluid_background = empty_sprite,
+            window_background = empty_sprite,
+            flow_sprite = empty_sprite
+        }
+        pipe_elbow.circuit_wire_max_distance = 0
+        pipe_elbow.working_sound = nil
+        local ingredients = {}
+        if pipe_type == "steel" then
+            ingredients = { { "kr-steel-pipe", 1 } }
+        else
+            ingredients = { { pipe_type .. "-pipe", 1 } }
+        end
+        data:extend({
+            pipe_elbow,
+            {
+                type = "item",
+                name = pipe_type .. "-pipe-elbow",
+                icon = "__modpack_se_k2_bz_248k__/graphics/pipe-" .. pipe_type .. "/pipe-elbow.png",
+                icon_size = 64,
+                subgroup = subgroup,
+                order = "05",
+                place_result = pipe_type .. "-pipe-elbow",
+                stack_size = 200
+            },
+            {
+                type = "recipe",
+                name = pipe_type .. "-pipe-elbow",
+                subgroup = subgroup,
+                order = "05",
+                enabled = false,
+                ingredients = ingredients,
+                result_count = 1,
+                result = pipe_type .. "-pipe-elbow",
+            },
+        })
+    end
+end
+
 -- iron pipe
 data.raw["pipe"]["pipe"].pictures = bob_pipepictures("iron")
 data.raw["pipe-to-ground"]["pipe-to-ground"]["fluid_box"].pipe_covers = bob_pipecoverspictures("iron")
 data.raw["pipe-to-ground"]["pipe-to-ground"].pictures = bob_pipetogroundpictures("iron")
 
+-- steel pipe
+util.regroup.create_subgroup("fluid-steel-pipes", "fluid", "raw-06")
 data.raw["pipe"]["kr-steel-pipe"].pictures = bob_pipepictures("steel")
+data.raw["pipe"]["kr-steel-pipe"].icon = "__modpack_se_k2_bz_248k__/graphics/icons/steel-pipe.png"
+data.raw["pipe"]["kr-steel-pipe"].icon_size = 32
+data.raw["pipe"]["kr-steel-pipe"].icon_mipmaps = nil
+data.raw["item"]["kr-steel-pipe"].icon = "__modpack_se_k2_bz_248k__/graphics/icons/steel-pipe.png"
+data.raw["item"]["kr-steel-pipe"].icon_size = 32
+data.raw["item"]["kr-steel-pipe"].icon_mipmaps = nil
 data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"]["fluid_box"].pipe_covers = bob_pipecoverspictures("steel")
 data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].pictures = bob_pipetogroundpictures("steel")
-
+data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].icon = "__modpack_se_k2_bz_248k__/graphics/icons/steel-pipe-to-ground.png"
+data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].icon_size = 32
+data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].icon_mipmaps = nil
+data.raw["item"]["kr-steel-pipe-to-ground"].icon = "__modpack_se_k2_bz_248k__/graphics/icons/steel-pipe-to-ground.png"
+data.raw["item"]["kr-steel-pipe-to-ground"].icon_size = 32
+data.raw["item"]["kr-steel-pipe-to-ground"].icon_mipmaps = nil
+if mods["Flow Control"] then
+    createPipeStraight("steel", 125, "fluid-steel-pipes")
+    createPipeJunction("steel", 125, "fluid-steel-pipes")
+    createPipeElbow("steel", 125, "fluid-steel-pipes")
+    util.technology.addEffect("kr-steel-fluid-handling", { type = "unlock-recipe", recipe = "steel-pipe-straight" })
+    util.technology.addEffect("kr-steel-fluid-handling", { type = "unlock-recipe", recipe = "steel-pipe-junction" })
+    util.technology.addEffect("kr-steel-fluid-handling", { type = "unlock-recipe", recipe = "steel-pipe-elbow" })
+end
 -- brass pipe
-data:extend({
-    {
-        type = "pipe",
-        name = "brass-pipe",
-        icon = "__modpack_se_k2_bz_248k__/graphics/icons/brass-pipe.png",
-        icon_size = 32,
-        flags = { "placeable-neutral", "player-creation" },
-        minable = { mining_time = 0.1, result = "brass-pipe" },
-        max_health = 200,
-        corpse = "pipe-remnants",
-        resistances = {
-            {
-                type = "fire",
-                percent = 90,
-            },
-        },
-        fast_replaceable_group = "pipe",
-        collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
-        selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-        fluid_box = {
-            height = 1.5,
-            base_area = 1,
-            pipe_connections = {
-                { position = { 0, -1 } },
-                { position = { 1, 0 } },
-                { position = { 0, 1 } },
-                { position = { -1, 0 } },
-            },
-        },
-        pictures = bob_pipepictures("brass"),
-        working_sound = {
-            sound = {
-                {
-                    filename = "__base__/sound/pipe.ogg",
-                    volume = 0.65,
-                },
-            },
-            match_volume_to_activity = true,
-            max_sounds_per_type = 3,
-        },
-        horizontal_window_bounding_box = { { -0.25, -0.25 }, { 0.25, 0.15625 } },
-        vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
-    },
-
-    {
-        type = "pipe-to-ground",
-        name = "brass-pipe-to-ground",
-        icon = "__modpack_se_k2_bz_248k__/graphics/icons/brass-pipe-to-ground.png",
-        icon_size = 32,
-        flags = { "placeable-neutral", "player-creation" },
-        minable = { mining_time = 0.1, result = "brass-pipe-to-ground" },
-        max_health = 250,
-        corpse = "small-remnants",
-        resistances = {
-            {
-                type = "fire",
-                percent = 80,
-            },
-        },
-        fast_replaceable_group = "pipe",
-        collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
-        selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-        fluid_box = {
-            height = 1.5,
-            base_area = 1,
-            pipe_covers = bob_pipecoverspictures("brass"),
-            pipe_connections = {
-                { position = { 0, -1 } },
-                {
-                    position = { 0, 1 },
-                    max_underground_distance = 60,
-                },
-            },
-        },
-        underground_sprite = {
-            filename = "__core__/graphics/arrows/underground-lines.png",
-            priority = "extra-high-no-scale",
-            width = 64,
-            height = 64,
-            scale = 0.5,
-        },
-        underground_remove_pipes_sprite = {
-            filename = "__core__/graphics/arrows/underground-lines-remove.png",
-            priority = "high",
-            width = 64,
-            height = 64,
-            x = 0,
-            scale = 0.5,
-        },
-        pictures = bob_pipetogroundpictures("brass"),
-    },
+util.regroup.create_subgroup("fluid-brass-pipes", "fluid", "raw-07")
+createPipe("brass", 150, "fluid-brass-pipes", {
+    { "bolted-flange", 1 },
+    { "brass-plate",   5 },
 })
-
--- data.raw.pipe["kr-steel-pipe"].next_upgrade = "brass-pipe"
--- data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].next_upgrade = "brass-pipe-to-ground"
-
-
-data:extend({
-    {
-        type = "item-subgroup",
-        name = "fluid-brass-pipes",
-        group = "fluid",
-        order = "raw-07"
-    },
-    {
-        type = "item",
-        name = "brass-pipe",
-        icon = "__modpack_se_k2_bz_248k__/graphics/icons/brass-pipe.png",
-        icon_size = 32,
-        subgroup = "fluid-brass-pipes",
-        order = "01",
-        place_result = "brass-pipe",
-        stack_size = 200,
-    },
-
-    {
-        type = "item",
-        name = "brass-pipe-to-ground",
-        icon = "__modpack_se_k2_bz_248k__/graphics/icons/brass-pipe-to-ground.png",
-        icon_size = 32,
-        subgroup = "fluid-brass-pipes",
-        order = "02",
-        place_result = "brass-pipe-to-ground",
-        stack_size = 200,
-    },
+createPipeToGround("brass", 150, 64, "fluid-brass-pipes", {
+    { "brass-pipe",    20 },
+    { "brass-plate",   2 },
+    { "bismuth-plate", 2 },
+    { "lead-plate",    1 },
+    { "tin-plate",     1 },
 })
-
-data:extend({
-    {
-        type = "recipe",
-        name = "brass-pipe",
-        enabled = false,
-        ingredients = {
-            { "bolted-flange", 1 },
-            { "brass-plate",   5 },
-        },
-        result = "brass-pipe",
-    },
-
-    {
-        type = "recipe",
-        name = "brass-pipe-to-ground",
-        enabled = false,
-        ingredients = {
-            { "brass-pipe",    20 },
-            { "brass-plate",   2 },
-            { "bismuth-plate", 2 },
-            { "lead-plate",    1 },
-            { "tin-plate",     1 },
-        },
-        result_count = 2,
-        result = "brass-pipe-to-ground",
-    },
-})
-
 data:extend({
     {
         type = "technology",
@@ -704,3 +945,11 @@ data:extend({
         },
     },
 })
+if mods["Flow Control"] then
+    createPipeStraight("brass", 150, "fluid-brass-pipes")
+    createPipeJunction("brass", 150, "fluid-brass-pipes")
+    createPipeElbow("brass", 150, "fluid-brass-pipes")
+    util.technology.addEffect("brass-fluid-handling", { type = "unlock-recipe", recipe = "brass-pipe-straight" })
+    util.technology.addEffect("brass-fluid-handling", { type = "unlock-recipe", recipe = "brass-pipe-junction" })
+    util.technology.addEffect("brass-fluid-handling", { type = "unlock-recipe", recipe = "brass-pipe-elbow" })
+end
