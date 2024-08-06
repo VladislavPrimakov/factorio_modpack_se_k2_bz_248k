@@ -94,9 +94,3 @@ for _, recipe in ipairs(data.raw["module"]["fi_modules_productivity_1_item"].lim
         end
     end
 end
-util.item.removeByType("module", "fi_modules_productivity_1_item")
-util.item.removeByType("module", "fi_modules_productivity_2_item")
-util.item.removeByType("module", "fi_modules_productivity_3_item")
-util.item.removeByType("module", "fi_modules_productivity_4_item")
-util.item.removeByType("module", "fi_modules_productivity_5_item")
-util.item.removeByType("module", "fi_modules_productivity_6_item")

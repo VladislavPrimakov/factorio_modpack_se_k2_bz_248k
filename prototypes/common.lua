@@ -59,18 +59,18 @@ data.raw["assembling-machine"]["gr_crafter_entity"].fluid_boxes = fluid_boxes
 data.raw["assembling-machine"]["fi_crafter_entity"].crafting_categories = crafting_categories
 data.raw["assembling-machine"]["gr_crafter_entity"].crafting_categories = crafting_categories
 
-util.equipment.create_equipment_category("eq-generator")
-util.equipment.create_equipment_category("eq-defense")
-util.equipment.create_equipment_category("eq-energy-shield")
-util.equipment.create_equipment_category("eq-adaptive-shield")
-util.equipment.create_equipment_category("eq-character")
-util.equipment.create_equipment_category("eq-battery")
-util.equipment.create_equipment_category("eq-solar")
-util.equipment.create_grid("kr-nuclear-locomotive-grid")
-util.equipment.create_grid("space-locomotive-grid")
-util.equipment.create_grid("gr_magnet_train_pre_grid")
-util.equipment.create_grid("gr_magnet_train_grid")
-util.equipment.create_grid("kr-advanced-tank-grid")
+util.equipment.createEquipmentCategory("eq-generator")
+util.equipment.createEquipmentCategory("eq-defense")
+util.equipment.createEquipmentCategory("eq-energy-shield")
+util.equipment.createEquipmentCategory("eq-adaptive-shield")
+util.equipment.createEquipmentCategory("eq-character")
+util.equipment.createEquipmentCategory("eq-battery")
+util.equipment.createEquipmentCategory("eq-solar")
+util.equipment.createGrid("kr-nuclear-locomotive-grid")
+util.equipment.createGrid("space-locomotive-grid")
+util.equipment.createGrid("gr_magnet_train_pre_grid")
+util.equipment.createGrid("gr_magnet_train_grid")
+util.equipment.createGrid("kr-advanced-tank-grid")
 
 data.raw["generator-equipment"]["mk3-generator-rampant-arsenal"].power = "2000kW"
 

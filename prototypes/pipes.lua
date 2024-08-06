@@ -879,7 +879,7 @@ data.raw["pipe-to-ground"]["pipe-to-ground"]["fluid_box"].pipe_covers = bob_pipe
 data.raw["pipe-to-ground"]["pipe-to-ground"].pictures = bob_pipetogroundpictures("iron")
 
 -- steel pipe
-util.regroup.create_subgroup("fluid-steel-pipes", "fluid", "raw-06")
+util.regroup.createSubgroup("fluid-steel-pipes", "fluid", "raw-06")
 data.raw["pipe"]["kr-steel-pipe"].pictures = bob_pipepictures("steel")
 data.raw["pipe"]["kr-steel-pipe"].icon = "__modpack_se_k2_bz_248k__/graphics/icons/steel-pipe.png"
 data.raw["pipe"]["kr-steel-pipe"].icon_size = 32
@@ -904,7 +904,7 @@ if mods["Flow Control"] then
     util.technology.addEffect("kr-steel-fluid-handling", { type = "unlock-recipe", recipe = "steel-pipe-elbow" })
 end
 -- brass pipe
-util.regroup.create_subgroup("fluid-brass-pipes", "fluid", "raw-07")
+util.regroup.createSubgroup("fluid-brass-pipes", "fluid", "raw-07")
 createPipe("brass", 150, "fluid-brass-pipes", {
     { "bolted-flange", 1 },
     { "brass-plate",   5 },

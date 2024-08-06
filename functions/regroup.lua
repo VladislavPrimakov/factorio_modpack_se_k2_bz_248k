@@ -1,17 +1,17 @@
-local function create_subgroup(name_subgroup, group, order)
-    if name_subgroup then
-        if data.raw["item-subgroup"][name_subgroup] then
+local function createSubgroup(nameSubgroup, group, order)
+    if nameSubgroup then
+        if data.raw["item-subgroup"][nameSubgroup] then
             if group then
-                data.raw["item-subgroup"][name_subgroup].group = group
+                data.raw["item-subgroup"][nameSubgroup].group = group
             end
             if order then
-                data.raw["item-subgroup"][name_subgroup].order = order
+                data.raw["item-subgroup"][nameSubgroup].order = order
             end
         else
             data:extend {
                 {
                     type = "item-subgroup",
-                    name = name_subgroup,
+                    name = nameSubgroup,
                     group = group,
                     order = tostring(order),
                 }
@@ -20,27 +20,27 @@ local function create_subgroup(name_subgroup, group, order)
     end
 end
 
-local function local_set_subgroup_to_prototype(type, name_prototype, subgroup, order)
+local function local_setSubgroupToPrototype(type, namePrototype, subgroup, order)
     if data.raw[type] then
-        if data.raw[type][name_prototype] then
+        if data.raw[type][namePrototype] then
             if subgroup then
-                data.raw[type][name_prototype].subgroup = subgroup
+                data.raw[type][namePrototype].subgroup = subgroup
             end
             if order then
-                data.raw[type][name_prototype].order = tostring(order)
+                data.raw[type][namePrototype].order = tostring(order)
             end
         end
     end
 end
 
-local function set_subgroup_to_prototype(name_prototype, subgroup, order, type)
-    if name_prototype then
+local function setSubgroupToPrototype(namePrototype, subgroup, order, type)
+    if namePrototype then
         if data.raw["item-subgroup"][subgroup] then
             if type then
-                local_set_subgroup_to_prototype(type, name_prototype, subgroup, order)
+                local_setSubgroupToPrototype(type, namePrototype, subgroup, order)
             else
                 for _type, _ in pairs(data.raw) do
-                    local_set_subgroup_to_prototype(_type, name_prototype, subgroup, order)
+                    local_setSubgroupToPrototype(_type, namePrototype, subgroup, order)
                 end
             end
         end
@@ -48,6 +48,6 @@ local function set_subgroup_to_prototype(name_prototype, subgroup, order, type)
 end
 
 return {
-    set_subgroup_to_prototype = set_subgroup_to_prototype,
-    create_subgroup = create_subgroup,
+    setSubgroupToPrototype = setSubgroupToPrototype,
+    createSubgroup = createSubgroup,
 }

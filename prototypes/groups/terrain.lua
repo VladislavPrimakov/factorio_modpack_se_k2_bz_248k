@@ -10,7 +10,7 @@ data:extend {
     },
 }
 
-util.regroup.create_subgroup("terrain", "terrain", "raw-01")
+util.regroup.createSubgroup("terrain", "terrain", "raw-01")
 
 -- terrain
-util.regroup.set_subgroup_to_prototype("el_dirty_water_landfill_recipe", "terrain")
+util.regroup.setSubgroupToPrototype("el_dirty_water_landfill_recipe", "terrain")
