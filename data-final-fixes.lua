@@ -4,6 +4,6 @@ require("prototypes/groups/_ordersgroup")
 -- re-stack
 require("prototypes/re_stack")
 
--- final fixes
+-- prototypes
 require("prototypes/rampant-arsenal-final")
 require("prototypes/common-final")

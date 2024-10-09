@@ -25,13 +25,6 @@ util.recipe.remove("fu_burn_gr_white_hole_item_recipe")
 util.technology.hide("fu_ki_plus_2_tech")
 
 -- remove 248k modules
-util.item.removeByType("module", "fi_modules_productivity_1_item")
-util.item.removeByType("module", "fi_modules_productivity_2_item")
-util.item.removeByType("module", "fi_modules_productivity_3_item")
-util.item.removeByType("module", "fi_modules_productivity_4_item")
-util.item.removeByType("module", "fi_modules_productivity_5_item")
-util.item.removeByType("module", "fi_modules_productivity_6_item")
-
 util.technology.remove("fi_modules_1_tech")
 util.technology.remove("fi_modules_2_tech")
 util.technology.remove("fi_modules_3_tech")
@@ -48,7 +41,6 @@ util.recipe.remove("fi_modules_productivity_6_recipe")
 
 util.technology.addEffect("modules", { type = "unlock-recipe", recipe = "fi_modules_core_recipe" })
 util.technology.addEffect("modules", { type = "unlock-recipe", recipe = "fi_modules_base_recipe" })
-
 
 -- remove 248k star engine
 util.technology.remove("fu_star_engine_tech")
